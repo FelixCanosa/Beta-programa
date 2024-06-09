@@ -5,7 +5,7 @@ var animation_tree
 var animationa_playback
 
 func _ready():
-	$Sprite2D/AnimationTree.speed_scale=2.0
+
 	animation_tree = get_node("Sprite2D/AnimationTree")
 	animationa_playback = animation_tree.get("parameters/playback")
 

@@ -38,7 +38,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_jp40l"]
 resource_name = "idle_left"
-length = 3.2
+length = 2.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -47,15 +47,15 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(0, 8), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8)]
+"values": [Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(0, 8), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_eefgv"]
 resource_name = "idle_right"
-length = 3.0
+length = 2.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -64,10 +64,10 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(-0.1, 0.3, 0.7, 1.1, 1.5, 1.9, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(0, 9), Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9), Vector2i(0, 10), Vector2i(1, 10), Vector2i(2, 10), Vector2i(3, 10)]
+"values": [Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9), Vector2i(0, 10), Vector2i(1, 10), Vector2i(2, 10), Vector2i(3, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_k28s3"]
@@ -268,6 +268,7 @@ libraries = {
 speed_scale = 4.0
 
 [node name="AnimationTree" type="AnimationTree" parent="Sprite2D"]
+active = false
 tree_root = SubResource("AnimationNodeStateMachine_id6a5")
 anim_player = NodePath("../AnimationPlayer")
 parameters/descansar/blend_position = Vector2(-0.00160003, 0.983598)
