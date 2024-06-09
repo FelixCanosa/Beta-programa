@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://drf0rwnxrwjbc"]
+[gd_scene load_steps=44 format=3 uid="uid://drf0rwnxrwjbc"]
 
 [ext_resource type="Texture2D" uid="uid://b8oivwwjm2o1h" path="res://Texturas BETAS/Texture/1.png" id="1_0th21"]
 [ext_resource type="Texture2D" uid="uid://cwi3yvolsjc6v" path="res://Texturas BETAS/Texture/4.png" id="2_hpt7k"]
@@ -3774,7 +3774,45 @@ sources/14 = SubResource("TileSetAtlasSource_v0b6x")
 sources/15 = SubResource("TileSetAtlasSource_qh4k1")
 sources/16 = SubResource("TileSetAtlasSource_v5e1r")
 
+[sub_resource type="Gradient" id="Gradient_wm1na"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1ip83"]
+gradient = SubResource("Gradient_wm1na")
+fill = 1
+fill_from = Vector2(0.512195, 0.512195)
+fill_to = Vector2(0.871951, 0.176829)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wp80v"]
+cull_mode = 2
+polygon = PackedVector2Array(-300.943, -330.387, -285.593, -310.364, -277.25, -311.031, -278.919, -304.023, -284.925, -306.359, -277.584, -331.388, -281.254, -340.064, -284.592, -335.726, -282.256, -329.052, -272.244, -324.38, -279.252, -364.425, -286.26, -364.425, -285.259, -357.417, -278.585, -357.751, -275.248, -369.431, -294.937, -363.758, -276.249, -348.407)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_437hc"]
+polygon = PackedVector2Array(351.106, -243.893, 312.15, -199.693, 318.144, -150.249, 393.808, -135.266, 429.767, -162.984, 436.51, -255.879, 395.306, -267.117)
+
+[sub_resource type="Gradient" id="Gradient_0l12q"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b3646"]
+gradient = SubResource("Gradient_0l12q")
+
+[sub_resource type="Gradient" id="Gradient_8aoxd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iap4t"]
+gradient = SubResource("Gradient_8aoxd")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.520833, 0.5)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_sc7jo"]
+frames = 2
+one_shot = true
+frame_0/texture = SubResource("GradientTexture2D_b3646")
+frame_1/texture = SubResource("GradientTexture2D_iap4t")
+frame_1/duration = 1.0
+
 [node name="Node2D" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -3803,3 +3841,35 @@ layer_6/tile_data = PackedInt32Array(1704005, 262159, 15)
 layer_7/name = "Borde2"
 layer_7/z_index = 7
 layer_7/tile_data = PackedInt32Array()
+
+[node name="sol" type="PointLight2D" parent="."]
+z_index = 2
+position = Vector2(-89.1023, -280.436)
+scale = Vector2(1.59389, 1.57025)
+editor_only = true
+energy = 1.21
+shadow_enabled = true
+shadow_filter = 2
+texture = SubResource("GradientTexture2D_1ip83")
+texture_scale = 16.83
+
+[node name="sombras" type="Node2D" parent="."]
+position = Vector2(2.82843, 1.41422)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="sombras"]
+modulate = Color(1, 1, 1, 0)
+z_index = 9
+texture_filter = 1
+position = Vector2(-5.2301, 4.63409)
+occluder = SubResource("OccluderPolygon2D_wp80v")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="sombras"]
+position = Vector2(-205.061, -268.701)
+occluder = SubResource("OccluderPolygon2D_437hc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(348.685, 92.7851)
+shadow_enabled = true
+texture = SubResource("AnimatedTexture_sc7jo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
