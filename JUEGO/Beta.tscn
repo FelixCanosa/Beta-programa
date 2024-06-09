@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://drf0rwnxrwjbc"]
+[gd_scene load_steps=50 format=3 uid="uid://drf0rwnxrwjbc"]
 
 [ext_resource type="Texture2D" uid="uid://b8oivwwjm2o1h" path="res://Texturas BETAS/Texture/1.png" id="1_0th21"]
 [ext_resource type="Texture2D" uid="uid://cwi3yvolsjc6v" path="res://Texturas BETAS/Texture/4.png" id="2_hpt7k"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bi33qqr8mi6wu" path="res://Texturas BETAS/Tilesets/wall-8 - 2 tiles tall.png" id="15_joywu"]
 [ext_resource type="Texture2D" uid="uid://b0j0d6d44efkr" path="res://Interior 2/TopDownHouse_SmallItems.png" id="16_7xrpm"]
 [ext_resource type="Texture2D" uid="uid://bwkugacmv2ags" path="res://Texturas BETAS/2.png" id="16_iu02g"]
+[ext_resource type="PackedScene" uid="uid://ij2roxgdttpi" path="res://Characters/protagonista/character_body_2d.tscn" id="24_lw1o0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xo4pp"]
 texture = ExtResource("1_0th21")
@@ -6068,3 +6069,18 @@ layer_6/tile_data = PackedInt32Array(1704005, 262159, 15)
 layer_7/name = "Borde2"
 layer_7/z_index = 7
 layer_7/tile_data = PackedInt32Array()
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("24_lw1o0")]
+z_index = 3
+position = Vector2(46, -52)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(162, 291)
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_left_margin = 0.35
+drag_top_margin = 0.42
+drag_right_margin = 0.37
+drag_bottom_margin = 0.35
+editor_draw_drag_margin = true
