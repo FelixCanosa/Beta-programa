@@ -6093,3 +6093,7 @@ drag_top_margin = 0.42
 drag_right_margin = 0.37
 drag_bottom_margin = 0.35
 editor_draw_drag_margin = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Node2D"]
