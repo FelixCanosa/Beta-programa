@@ -4,10 +4,20 @@ extends CharacterBody2D
 var animation_tree
 var animationa_playback
 
+
+
 func _ready():
-	$Sprite2D/AnimationTree.speed_scale=2.0
 	animation_tree = get_node("Sprite2D/AnimationTree")
 	animationa_playback = animation_tree.get("parameters/playback")
+	
+	$Modelo.visible = false
+
+	
+func _process(delta):
+	# Comprueba si el jugador ha presionado la tecla "R"
+	if Input.is_action_just_pressed("AprecerAcistente"):
+		# Cambia la visibilidad de la interfaz
+		$Modelo.visible = !$Modelo.visible
 
 func _physics_process(delta):
 	var move_direciton = Vector2(

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://2gq51vg8diuq"]
+[gd_scene load_steps=45 format=3 uid="uid://2gq51vg8diuq"]
 
 [ext_resource type="Texture2D" uid="uid://dpo5ryk8iy7gh" path="res://Interior 2/TopDownHouse_DoorsAndWindows.png" id="1_25d5w"]
 [ext_resource type="Texture2D" uid="uid://bungmtftwjrsa" path="res://Interior 2/TopDownHouse_FloorsAndWalls.png" id="2_x8c5d"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b0j0d6d44efkr" path="res://Interior 2/TopDownHouse_SmallItems.png" id="5_8cfnq"]
 [ext_resource type="Texture2D" uid="uid://c2gekkbehwuic" path="res://interior free/interior free.png" id="6_4xdei"]
 [ext_resource type="Texture2D" uid="uid://bwkugacmv2ags" path="res://Texturas BETAS/2.png" id="7_hmc22"]
+[ext_resource type="PackedScene" uid="uid://ij2roxgdttpi" path="res://Characters/protagonista/character_body_2d.tscn" id="8_tye4a"]
+[ext_resource type="PackedScene" uid="uid://br6bhyxefat2t" path="res://Interior 2/entrada_casa_roja.tscn" id="9_ljrqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fyt1u"]
 texture = ExtResource("1_25d5w")
@@ -2370,6 +2372,7 @@ fill_from = Vector2(0.52349, 0.560403)
 [node name="Terreno" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 tile_set = SubResource("TileSet_6r8vs")
 format = 2
 layer_0/name = "Piso"
@@ -2480,3 +2483,11 @@ position = Vector2(-9.76033, -31.5944)
 scale = Vector2(0.985153, 1.48624)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_emauh")
+
+[node name="jugador" parent="." instance=ExtResource("8_tye4a")]
+position = Vector2(99, -2)
+
+[node name="Camera2D" type="Camera2D" parent="jugador"]
+
+[node name="Entrada_casaRoja" parent="." instance=ExtResource("9_ljrqi")]
+position = Vector2(89, 136)

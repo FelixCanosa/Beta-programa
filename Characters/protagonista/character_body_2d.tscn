@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ij2roxgdttpi"]
+[gd_scene load_steps=29 format=3 uid="uid://ij2roxgdttpi"]
 
 [ext_resource type="Script" path="res://Characters/protagonista/CharacterBody2D.gd" id="1_0tynf"]
 [ext_resource type="Texture2D" uid="uid://lmw844w4emvq" path="res://Characters/protagonista/BIRDSPRITESHEET_White.png" id="2_sjq3s"]
@@ -250,12 +250,16 @@ states/idle/position = Vector2(345, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nkcnk"), "idle", "descansar", SubResource("AnimationNodeStateMachineTransition_vphse"), "descansar", "idle", SubResource("AnimationNodeStateMachineTransition_ncgxw")]
 graph_offset = Vector2(-184, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i38rs"]
+radius = 26.0
+height = 52.0
+
+[node name="jugador" type="CharacterBody2D"]
 script = ExtResource("1_0tynf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(162.5, 288)
+position = Vector2(1, -5.99998)
 scale = Vector2(2.96875, 2.875)
 texture = ExtResource("2_sjq3s")
 hframes = 4
@@ -272,3 +276,7 @@ tree_root = SubResource("AnimationNodeStateMachine_id6a5")
 anim_player = NodePath("../AnimationPlayer")
 parameters/descansar/blend_position = Vector2(-0.00160003, 0.983598)
 parameters/idle/blend_position = Vector2(-0.0976, 0.0247138)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("CapsuleShape2D_i38rs")
