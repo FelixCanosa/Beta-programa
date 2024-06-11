@@ -12,4 +12,4 @@ Un juego (programa) educativo, sostenible y que concientiza el cuidado de la nat
 La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.
 
 
-![Imagen de ejemplo](imagenes del README/Captura de pantalla de 2024-06-10 15-38-44.png)
+![Imagen de ejemplo](/imagenes del README/Captura de pantalla de 2024-06-10 15-38-44.png)
