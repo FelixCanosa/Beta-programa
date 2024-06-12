@@ -20,25 +20,25 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 662.0
-offset_top = 275.0
-offset_right = 767.0
-offset_bottom = 337.0
+offset_left = 444.0
+offset_top = 199.0
+offset_right = 501.0
+offset_bottom = 241.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "enter"
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 115.0
-offset_top = 324.0
-offset_right = 656.0
-offset_bottom = 409.0
+offset_left = 17.0
+offset_top = 228.0
+offset_right = 431.0
+offset_bottom = 285.0
 
 [node name="Terminal" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.890196)
 texture_filter = 1
-position = Vector2(384, 176)
-scale = Vector2(0.140234, 0.121759)
+position = Vector2(225.375, 118.25)
+scale = Vector2(0.107617, 0.0969906)
 texture = ExtResource("2_8yruq")
 
 [node name="terminal" type="RichTextLabel" parent="."]
@@ -49,10 +49,10 @@ anchor_left = 0.306
 anchor_top = 0.147
 anchor_right = 0.743
 anchor_bottom = 0.606
-offset_left = 129.0
-offset_top = 54.0
-offset_right = 628.0
-offset_bottom = 298.0
+offset_left = 48.0
+offset_top = 25.0
+offset_right = 415.0
+offset_bottom = 207.0
 grow_horizontal = 2
 grow_vertical = 2
 
