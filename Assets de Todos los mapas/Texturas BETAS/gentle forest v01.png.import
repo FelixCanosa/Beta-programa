@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxfr5cdiygub5"
-path="res://.godot/imported/gentle forest v01.png-65ab0f0fd7281b51774d9575d641de60.ctex"
+path="res://.godot/imported/gentle forest v01.png-2a53199efe6708b5c813167b88aee4e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/gentle forest v01.png"
-dest_files=["res://.godot/imported/gentle forest v01.png-65ab0f0fd7281b51774d9575d641de60.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/gentle forest v01.png"
+dest_files=["res://.godot/imported/gentle forest v01.png-2a53199efe6708b5c813167b88aee4e8.ctex"]
 
 [params]
 

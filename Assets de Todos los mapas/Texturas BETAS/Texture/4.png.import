@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwi3yvolsjc6v"
-path="res://.godot/imported/4.png-a3b216f35b1835540aed56e93d852bbf.ctex"
+path="res://.godot/imported/4.png-6eb794b390759ec9e115e89dac290fd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Texture/4.png"
-dest_files=["res://.godot/imported/4.png-a3b216f35b1835540aed56e93d852bbf.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Texture/4.png"
+dest_files=["res://.godot/imported/4.png-6eb794b390759ec9e115e89dac290fd7.ctex"]
 
 [params]
 

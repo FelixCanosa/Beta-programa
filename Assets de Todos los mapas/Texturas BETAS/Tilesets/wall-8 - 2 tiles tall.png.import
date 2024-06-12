@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi33qqr8mi6wu"
-path="res://.godot/imported/wall-8 - 2 tiles tall.png-d0a4434e9cc5561c9f9b125c355dac7c.ctex"
+path="res://.godot/imported/wall-8 - 2 tiles tall.png-974cde5891bb5154fb49cf35d5e070fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Tilesets/wall-8 - 2 tiles tall.png"
-dest_files=["res://.godot/imported/wall-8 - 2 tiles tall.png-d0a4434e9cc5561c9f9b125c355dac7c.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Tilesets/wall-8 - 2 tiles tall.png"
+dest_files=["res://.godot/imported/wall-8 - 2 tiles tall.png-974cde5891bb5154fb49cf35d5e070fa.ctex"]
 
 [params]
 

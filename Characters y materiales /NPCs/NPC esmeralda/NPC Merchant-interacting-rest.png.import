@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xjc7pg263mlb"
-path="res://.godot/imported/NPC Merchant-interacting-rest.png-7ab51bae6d877c52db0d98af048d16c7.ctex"
+path="res://.godot/imported/NPC Merchant-interacting-rest.png-be6a578323c8a23f2dfbb91670c439d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/NPCs/NPC esmeralda/NPC Merchant-interacting-rest.png"
-dest_files=["res://.godot/imported/NPC Merchant-interacting-rest.png-7ab51bae6d877c52db0d98af048d16c7.ctex"]
+source_file="res://Characters y materiales /NPCs/NPC esmeralda/NPC Merchant-interacting-rest.png"
+dest_files=["res://.godot/imported/NPC Merchant-interacting-rest.png-be6a578323c8a23f2dfbb91670c439d3.ctex"]
 
 [params]
 

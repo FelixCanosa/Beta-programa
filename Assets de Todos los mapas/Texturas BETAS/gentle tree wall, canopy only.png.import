@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ryrwaqfbwh5r"
-path="res://.godot/imported/gentle tree wall, canopy only.png-c2bd24678f7f1e792cf8baebb3de5c31.ctex"
+path="res://.godot/imported/gentle tree wall, canopy only.png-fd9f441439c3cdd6aff95ec763331f1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/gentle tree wall, canopy only.png"
-dest_files=["res://.godot/imported/gentle tree wall, canopy only.png-c2bd24678f7f1e792cf8baebb3de5c31.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/gentle tree wall, canopy only.png"
+dest_files=["res://.godot/imported/gentle tree wall, canopy only.png-fd9f441439c3cdd6aff95ec763331f1a.ctex"]
 
 [params]
 

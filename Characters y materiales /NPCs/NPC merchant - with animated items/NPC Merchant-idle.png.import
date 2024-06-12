@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn8mlmdir7wun"
-path="res://.godot/imported/NPC Merchant-idle.png-9f6d6494225e72335a49ee6472b00014.ctex"
+path="res://.godot/imported/NPC Merchant-idle.png-f093116a17782f108c083d1636d75de4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/NPCs/NPC merchant - with animated items/NPC Merchant-idle.png"
-dest_files=["res://.godot/imported/NPC Merchant-idle.png-9f6d6494225e72335a49ee6472b00014.ctex"]
+source_file="res://Characters y materiales /NPCs/NPC merchant - with animated items/NPC Merchant-idle.png"
+dest_files=["res://.godot/imported/NPC Merchant-idle.png-f093116a17782f108c083d1636d75de4.ctex"]
 
 [params]
 

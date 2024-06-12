@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://64c3iugtwi40"
-path="res://.godot/imported/TX Tileset Stone Ground.png-aa8c573b34afa538e7d99cb3e93dd80b.ctex"
+path="res://.godot/imported/TX Tileset Stone Ground.png-b00c3befd2ee2ef8067d6186d1bf15bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Texture/TX Tileset Stone Ground.png"
-dest_files=["res://.godot/imported/TX Tileset Stone Ground.png-aa8c573b34afa538e7d99cb3e93dd80b.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Texture/TX Tileset Stone Ground.png"
+dest_files=["res://.godot/imported/TX Tileset Stone Ground.png-b00c3befd2ee2ef8067d6186d1bf15bb.ctex"]
 
 [params]
 

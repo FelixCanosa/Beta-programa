@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kgvum3hypaho"
-path="res://.godot/imported/5TX Tileset Wall.png-8edb4e23fc5a35556e08f21b7420d015.ctex"
+path="res://.godot/imported/5TX Tileset Wall.png-fc068d5267e2b18707fe91572231ed5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Texture/5TX Tileset Wall.png"
-dest_files=["res://.godot/imported/5TX Tileset Wall.png-8edb4e23fc5a35556e08f21b7420d015.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Texture/5TX Tileset Wall.png"
+dest_files=["res://.godot/imported/5TX Tileset Wall.png-fc068d5267e2b18707fe91572231ed5f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lmw844w4emvq"
-path="res://.godot/imported/BIRDSPRITESHEET_White.png-1b8151549fbe8f8b9b31279aa9342bfe.ctex"
+path="res://.godot/imported/BIRDSPRITESHEET_White.png-ea61dce3bca0d06f1d11e97da249c27b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/protagonista/BIRDSPRITESHEET_White.png"
-dest_files=["res://.godot/imported/BIRDSPRITESHEET_White.png-1b8151549fbe8f8b9b31279aa9342bfe.ctex"]
+source_file="res://Characters y materiales /protagonista/BIRDSPRITESHEET_White.png"
+dest_files=["res://.godot/imported/BIRDSPRITESHEET_White.png-ea61dce3bca0d06f1d11e97da249c27b.ctex"]
 
 [params]
 

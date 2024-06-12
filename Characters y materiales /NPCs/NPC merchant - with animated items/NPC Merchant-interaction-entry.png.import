@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3mbifmupqwa"
-path="res://.godot/imported/NPC Merchant-interaction-entry.png-1823934970beb79c288da389c1ed3d66.ctex"
+path="res://.godot/imported/NPC Merchant-interaction-entry.png-2b26be54d079995036159cd7a2595a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/NPCs/NPC merchant - with animated items/NPC Merchant-interaction-entry.png"
-dest_files=["res://.godot/imported/NPC Merchant-interaction-entry.png-1823934970beb79c288da389c1ed3d66.ctex"]
+source_file="res://Characters y materiales /NPCs/NPC merchant - with animated items/NPC Merchant-interaction-entry.png"
+dest_files=["res://.godot/imported/NPC Merchant-interaction-entry.png-2b26be54d079995036159cd7a2595a07.ctex"]
 
 [params]
 

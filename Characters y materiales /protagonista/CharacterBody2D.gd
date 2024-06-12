@@ -10,7 +10,7 @@ func _ready():
 	animation_tree = get_node("Sprite2D/AnimationTree")
 	animationa_playback = animation_tree.get("parameters/playback")
 	
-	$Modelo.visible = false
+#	$Modelo.visible = false
 
 	
 func _process(delta):

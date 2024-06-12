@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v6lyli1l7wes"
-path="res://.godot/imported/golden chalice 64x64-spirits.png-cb7572336cbe0fffd06c437c9de2550c.ctex"
+path="res://.godot/imported/golden chalice 64x64-spirits.png-910026f228f154bd3c163d4816537e2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Props/golden chalice 64x64-spirits.png"
-dest_files=["res://.godot/imported/golden chalice 64x64-spirits.png-cb7572336cbe0fffd06c437c9de2550c.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Props/golden chalice 64x64-spirits.png"
+dest_files=["res://.godot/imported/golden chalice 64x64-spirits.png-910026f228f154bd3c163d4816537e2d.ctex"]
 
 [params]
 

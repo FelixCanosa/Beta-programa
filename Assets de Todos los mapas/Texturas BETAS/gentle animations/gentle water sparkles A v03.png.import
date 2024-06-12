@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4lx86mnlt487"
-path="res://.godot/imported/gentle water sparkles A v03.png-a78b74187aeea2b9bc7e4fd9b714d574.ctex"
+path="res://.godot/imported/gentle water sparkles A v03.png-6aee02a820d06ff94ca6f17f6dc2f373.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/gentle animations/gentle water sparkles A v03.png"
-dest_files=["res://.godot/imported/gentle water sparkles A v03.png-a78b74187aeea2b9bc7e4fd9b714d574.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/gentle animations/gentle water sparkles A v03.png"
+dest_files=["res://.godot/imported/gentle water sparkles A v03.png-6aee02a820d06ff94ca6f17f6dc2f373.ctex"]
 
 [params]
 

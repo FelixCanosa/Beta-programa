@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2ew7gl6maqp2"
-path="res://.godot/imported/shrine or fountain 160x128-on grass.png-37b2a1e3bbff5acd56458843c75a22ad.ctex"
+path="res://.godot/imported/shrine or fountain 160x128-on grass.png-4cc8c2e9528fb70f24aeaa3e5ea7dad3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Props/shrine or fountain 160x128-on grass.png"
-dest_files=["res://.godot/imported/shrine or fountain 160x128-on grass.png-37b2a1e3bbff5acd56458843c75a22ad.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Props/shrine or fountain 160x128-on grass.png"
+dest_files=["res://.godot/imported/shrine or fountain 160x128-on grass.png-4cc8c2e9528fb70f24aeaa3e5ea7dad3.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqyo7qjppybe7"
-path="res://.godot/imported/gentle waterfall A v03.png-bf4431ce2192abc74654ce4523e18c5f.ctex"
+path="res://.godot/imported/gentle waterfall A v03.png-9d97cb66161164d164b6512a22a96ca4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/gentle animations/gentle waterfall A v03.png"
-dest_files=["res://.godot/imported/gentle waterfall A v03.png-bf4431ce2192abc74654ce4523e18c5f.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/gentle animations/gentle waterfall A v03.png"
+dest_files=["res://.godot/imported/gentle waterfall A v03.png-9d97cb66161164d164b6512a22a96ca4.ctex"]
 
 [params]
 

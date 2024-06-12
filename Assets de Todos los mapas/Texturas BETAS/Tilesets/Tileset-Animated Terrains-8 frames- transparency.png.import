@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0dmnoprdyofc"
-path="res://.godot/imported/Tileset-Animated Terrains-8 frames- transparency.png-726cc39be91b018d7f05934f17381088.ctex"
+path="res://.godot/imported/Tileset-Animated Terrains-8 frames- transparency.png-942dce612d907aa33f35f7f0299f6398.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Tilesets/Tileset-Animated Terrains-8 frames- transparency.png"
-dest_files=["res://.godot/imported/Tileset-Animated Terrains-8 frames- transparency.png-726cc39be91b018d7f05934f17381088.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Tilesets/Tileset-Animated Terrains-8 frames- transparency.png"
+dest_files=["res://.godot/imported/Tileset-Animated Terrains-8 frames- transparency.png-942dce612d907aa33f35f7f0299f6398.ctex"]
 
 [params]
 

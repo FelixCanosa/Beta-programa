@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://shpf3mi5htco"
-path="res://.godot/imported/generic_estructure1-1-on grass.png-94244674ba25cf07eb291fb7b5b8171c.ctex"
+path="res://.godot/imported/generic_estructure1-1-on grass.png-2797cab9c5e398086d8885287416e9ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Props/generic_estructure1-1-on grass.png"
-dest_files=["res://.godot/imported/generic_estructure1-1-on grass.png-94244674ba25cf07eb291fb7b5b8171c.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Props/generic_estructure1-1-on grass.png"
+dest_files=["res://.godot/imported/generic_estructure1-1-on grass.png-2797cab9c5e398086d8885287416e9ff.ctex"]
 
 [params]
 

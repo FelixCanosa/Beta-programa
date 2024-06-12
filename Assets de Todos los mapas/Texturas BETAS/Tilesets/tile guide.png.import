@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfetbohdc42x7"
-path="res://.godot/imported/tile guide.png-f1dae3311a7280d10070fd40623c8c2c.ctex"
+path="res://.godot/imported/tile guide.png-c739865e034a67bd33cfacf836c21849.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Tilesets/tile guide.png"
-dest_files=["res://.godot/imported/tile guide.png-f1dae3311a7280d10070fd40623c8c2c.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Tilesets/tile guide.png"
+dest_files=["res://.godot/imported/tile guide.png-c739865e034a67bd33cfacf836c21849.ctex"]
 
 [params]
 

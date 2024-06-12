@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkdwv6fiq330w"
-path="res://.godot/imported/Tileset-Terrain2.png-61f5a639f6e6fbcef704f36f0343ba3c.ctex"
+path="res://.godot/imported/Tileset-Terrain2.png-621fe821bae5752b586b99590084cab3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets de Todos los mapas, y jugadores/Texturas BETAS/Tilesets/Tileset-Terrain2.png"
-dest_files=["res://.godot/imported/Tileset-Terrain2.png-61f5a639f6e6fbcef704f36f0343ba3c.ctex"]
+source_file="res://Assets de Todos los mapas/Texturas BETAS/Tilesets/Tileset-Terrain2.png"
+dest_files=["res://.godot/imported/Tileset-Terrain2.png-621fe821bae5752b586b99590084cab3.ctex"]
 
 [params]
 
