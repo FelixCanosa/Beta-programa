@@ -37,3 +37,9 @@ La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera
 - [ ] Implementacion de NPC
 - [ ] Obgetivos del jugador (Misiones)
 - [ ] Implementacion de efectos y sonidos
+ 
+### Update 3.0 (Estimada 2 meses posterior a la anterior)
+
+- [ ] Futuras implementaciónes
+
+
