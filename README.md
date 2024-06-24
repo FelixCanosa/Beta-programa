@@ -12,4 +12,28 @@ Un juego (programa) educativo, sostenible y que concientiza el cuidado de la nat
 La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.
 
 
-![Imagen de ejemplo](/imagenes del README/Captura de pantalla de 2024-06-10 15-38-44.png)
+**Diagrama de GANTT**
+---------------------
+
+
+## Juego Alpha
+
+- [x] Motor grafico
+- [x] LLM Implementada (IA)
+- [x] Terreno jugable (Ecenario)
+- [x] Mecanica basica de jugador
+- [x] Iluminacion
+- [ ] Coliciones entre objetos
+
+### Update
+
+- [x] Configurar el entorno
+- [x] Crear la estructura del proyecto
+- [ ] Implementar la funcionalidad principal
+- [x] Documentar el código
+- [ ] Pueblo a las afueras (Nuevo ecenario)
+- [ ] Mecanicas de jugador
+- [ ] Mecanicas del mundo
+- [ ] Implementacion de NPC
+- [ ] Obgetivos del jugador (Misiones)
+- [ ] Implementacion de efectos y sonidos
