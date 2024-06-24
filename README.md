@@ -16,7 +16,7 @@ La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera
 ---------------------
 
 
-## Juego Alpha
+## Juego Alpha 1.0
 
 - [x] Motor grafico
 - [x] LLM Implementada (IA)
@@ -25,7 +25,7 @@ La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera
 - [x] Iluminacion
 - [ ] Coliciones entre objetos
 
-### Update
+### Update 2.0 (Estimada 2 mese)
 
 - [x] Configurar el entorno
 - [x] Crear la estructura del proyecto
