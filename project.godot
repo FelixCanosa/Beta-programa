@@ -24,6 +24,10 @@ window/size/initial_position_type=0
 window/size/initial_screen=4
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Beta"
+
 [input]
 
 arriba={
