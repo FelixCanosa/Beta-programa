@@ -1,3 +1,10 @@
+**Integrantes actuales**
+---------------
+- Félix Francisco Canosa
+- Tiziano Aguilar
+- Carlos Gomes
+
+
 **¿De qué trata?**
 =====================
 
