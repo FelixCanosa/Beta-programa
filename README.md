@@ -1,7 +1,12 @@
 ![image](https://i.postimg.cc/HnHQtjQX/Logo-boceto-nwn.png)
 
+**Integrantes actuales**
+---------------
+- Félix Francisco Canosa
+- Tiziano Aguilar
+- Carlos Gomes
 **¿De qué trata?**
-=====================
+
 
 **Pantallazo general**
 --------------------
