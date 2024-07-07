@@ -1,0 +1,7 @@
+[1719596004] Log start
+[1719596004] llama_generate_text: build = 3029 (b864b50c)
+[1719596004] llama_generate_text: built with cc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 for x86_64-linux-gnu
+[1719596004] llama_generate_text: seed  = 1719596004
+[1719596004] llama_generate_text: llama backend init
+[1719596004] llama_generate_text: load the model and apply lora adapter, if any
+[1719596005] llama_generate_text: error: unable to load model
