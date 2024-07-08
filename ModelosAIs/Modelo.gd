@@ -32,7 +32,7 @@ func prompt_with_history() -> String:
 		else:
 			prompt += "<|im_start|>system\n" + d.text  + "<|im_end|>\n"
 	prompt += "<|im_start|>system\n"
-	print(prompt)
+	#print(prompt)
 	return prompt
 
 func _on_start_button_pressed():

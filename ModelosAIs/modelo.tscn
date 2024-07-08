@@ -10,7 +10,7 @@ z_index = 10
 script = ExtResource("1_tbqal")
 
 [node name="GDLlama" type="GDLlama" parent="."]
-model_path = "ModelosAIs/modelos/Qwen2-1.5B-Instruct-Q8_0.gguf"
+model_path = "ModelosAIs/modelos/Replete-Coder-Qwen-1.5b-Q8_0.gguf"
 should_output_prompt = false
 n_predict = 239
 
