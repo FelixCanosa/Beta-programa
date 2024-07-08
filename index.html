@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki de Táctica Pixel</title>
+    <link rel="stylesheet" href="estilo.css">.
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wiki de Táctica Pixel</h1>
+            <nav>
+                <ul>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="clases.html">Clases</a></li>
+                    <li><a href="armas.html">Armas</a></li>
+                    <li><a href="mapas.html">Mapas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="introduccion">
+                <h2>Bienvenido a la Wiki</h2>
+                <p>Explora nuestro mundo de estrategia y píxeles. Aquí encontrarás toda la información que necesitas sobre nuestro juego táctico estilo pixel.</p>
+            </section>
+
+            <section id="destacado">
+                <h2>Contenido Destacado</h2>
+                <ul>
+                    <li><a href="personajes.html#heroe1">Héroe del mes</a></li>
+                    <li><a href="mapas.html#mapa_nuevo">Nuevo mapa: Bosque Encantado</a></li>
+                    <li><a href="estrategias.html">Guía de estrategias avanzadas</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Wiki de Táctica Pixel. Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="terminos.html">Términos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
