@@ -47,7 +47,7 @@ gantt
     title Desarrollo del Juego Alpha
     dateFormat  YYYY-MM-DD
     section Juego Alpha 1.0
-    Motor gráfico           :a1, 2023-01-01, 30d
+    Motor gráfico           :a1, 2024-01-01, 30d
     LLM Implementada (IA)   :a2, after a1, 20d
     Terreno jugable (Escenario) :a3, after a2, 15d
     Mecánica básica de jugador :a4, after a3, 10d
@@ -55,7 +55,7 @@ gantt
     Colisiones entre objetos :a6, after a5, 10d
 
     section Update 2.0
-    Configurar el entorno   :b1, 2023-07-01, 5d
+    Configurar el entorno   :b1, 2024-07-01, 5d
     Crear la estructura del proyecto :b2, after b1, 7d
     Implementar la funcionalidad principal :b3, after b2, 20d
     Documentar el código    :b4, after b3, 10d
