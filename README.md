@@ -34,7 +34,7 @@ gantt
     Colisiones entre objetos :a6, after a5, 10d
 
     section Update 2.0
-    Configurar el entorno   :b1, 2023-04-01, 5d
+    Configurar el entorno   :b1, 2023-07-01, 5d
     Crear la estructura del proyecto :b2, after b1, 7d
     Implementar la funcionalidad principal :b3, after b2, 20d
     Documentar el código    :b4, after b3, 10d
