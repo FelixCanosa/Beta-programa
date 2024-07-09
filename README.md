@@ -19,8 +19,6 @@ Un juego (programa) educativo, sostenible y que concientiza el cuidado de la nat
 La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.
 
 
-# Nombre de tu Proyecto
-
 ## Diagrama de Gantt del Desarrollo
 
 ```mermaid
@@ -48,14 +46,3 @@ gantt
     Implementación de efectos y sonidos :b10, after b9, 8d
 ```
 
-## Descripción del Proyecto
-
-[Aquí puedes añadir una descripción de tu proyecto]
-
-## Cómo Contribuir
-
-[Instrucciones para contribuir al proyecto]
-
-## Licencia
-
-[Información sobre la licencia del proyecto]
