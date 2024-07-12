@@ -1,4 +1,4 @@
-![image](https://i.postimg.cc/HnHQtjQX/Logo-boceto-nwn.png)
+![image](https://i.postimg.cc/hvnB6Mn5/Designer-6-copia.png)
 
 **¿De qué trata? hola**
 =====================
