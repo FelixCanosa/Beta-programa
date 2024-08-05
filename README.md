@@ -46,3 +46,19 @@ gantt
     Implementación de efectos y sonidos :b10, after b9, 8d
 ```
 
+
+```
+Beta-programa
+├─ Header Global
+│  └─ header.js
+├─ README.md
+├─ Registro
+│  ├─ registro.css
+│  └─ registro.html
+├─ Scritps
+├─ estilo.css
+├─ imagenes index
+│  └─ Captura de pantalla de 2024-08-03 22-45-32.png
+└─ index.html
+
+```

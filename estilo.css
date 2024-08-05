@@ -8,172 +8,153 @@
     --accent-color: #ff79c6;
 }
 
-* {
-    box-sizing: border-box;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: var(--background-color);
-    color: var(--text-color);
     line-height: 1.6;
-    padding-top: 100px; /* Ajustado para el nuevo tamaño del header */
-    image-rendering: pixelated;
-    min-height: 100vh;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px; /* Ajusta este valor según la altura de tu header */
 }
 
 .container {
-    max-width: 800px;
-    width: 100%;
+    flex: 1 0 auto;
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-header {
-    background-color: var(--primary-color);
-    border-bottom: 4px solid var(--secondary-color);
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header h1 {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-header nav ul {
-    display: flex;
-    list-style-type: none;
-}
-
-header nav ul li {
-    margin-left: 15px;
-}
-
-header.scrolled {
-    padding: 5px 0;
-    background-color: rgba(74, 74, 74, 0.9);
-}
-
-header.scrolled h1 {
-    font-size: 1em;
-}
-
-header.scrolled nav ul li {
-    font-size: 0.8em;
-}
-
-main, footer {
-    background-color: var(--primary-color);
-    border: 4px solid var(--secondary-color);
+main {
+    background: var(--primary-color);
     padding: 20px;
-    margin-top: 40px; /* Añadido espacio entre header y main */
+    margin-top: 3em;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ... (el resto del CSS permanece igual) ... */
-
-h1, h2 {
-    color: var(--secondary-color);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 10px;
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border: 2px solid transparent;
-}
-
-a:hover {
-    color: var(--accent-color);
-    text-shadow: 0 0 5px var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-section {
-    margin-bottom: 30px;
-    padding: 15px;
+.section-block {
     background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--secondary-color);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-li {
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+p {
     margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+    text-align: left;
+    width: 100%;
 }
 
-li::before {
-    content: '►';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-}
-
-img {
-    image-rendering: pixelated;
+.section-image {
     max-width: 100%;
     height: auto;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
 }
 
-@keyframes glitch {
-    0% { transform: translate(2px, 2px); }
-    25% { transform: translate(-2px, -2px); }
-    50% { transform: translate(-2px, 2px); }
-    75% { transform: translate(2px, -2px); }
-    100% { transform: translate(2px, 2px); }
+#destacado ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
 }
 
-h1:hover {
-    animation: glitch 0.3s infinite;
+#destacado ul li {
+    margin-bottom: 15px;
 }
 
-section:hover {
-    transform: scale(1.02);
+#destacado ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#destacado ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-footer {
-    text-align: center;
+.galeria img:hover {
+    transform: scale(1.05);
 }
 
-footer nav ul {
-    justify-content: center;
+@media (min-width: 768px) {
+    .section-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .section-content .section-text {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .section-content .section-image {
+        flex: 1;
+        max-width: 45%;
+    }
+
+    #destacado .section-content {
+        flex-direction: row-reverse;
+    }
+
+    #destacado .section-content .section-text {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+
+    .section-image {
+        max-width: 100%;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }

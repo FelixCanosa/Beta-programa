@@ -4,59 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki de Táctica Pixel</title>
-    <link rel="stylesheet" href="estilo.css">.
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Wiki de Táctica Pixel</h1>
-            <nav>
-                <ul>
-                    <li><a href="personajes.html">Personajes</a></li>
-                    <li><a href="clases.html">Clases</a></li>
-                    <li><a href="armas.html">Armas</a></li>
-                    <li><a href="mapas.html">Mapas</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header></header>
 
+    <div class="container">
         <main>
-            <section id="introduccion">
+            <section id="introduccion" class="section-block">
                 <h2>Bienvenido a la Wiki</h2>
-                <p>Explora nuestro mundo de estrategia y píxeles. Aquí encontrarás toda la información que necesitas sobre nuestro juego táctico estilo pixel.</p>
+                <div class="section-content">
+                    <div class="section-text">
+                        <p>Explora nuestro mundo de estrategia y píxeles. Aquí encontrarás toda la información que necesitas sobre nuestro juego táctico estilo pixel.</p>
+                    </div>
+                    <img src="imagenes index/Designer.png" alt="Imagen de introducción" class="section-image">
+                </div>
+            </section>
+            
+            <section id="destacado" class="section-block">
+                <h2>Contenido Destacado</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <ul>
+                            <li><a href="personajes.html#heroe1">Héroe del mes</a></li>
+                            <li><a href="mapas.html#mapa_nuevo">Nuevo mapa: Bosque Encantado</a></li>
+                            <li><a href="estrategias.html">Guía de estrategias avanzadas</a></li>
+                        </ul>
+                    </div>
+                    <img src="imagenes index/heroe.png" alt="Imagen de contenido destacado" class="section-image">
+                </div>
             </section>
 
-            <section id="destacado">
-                <h2>Contenido Destacado</h2>
-                <ul>
-                    <li><a href="personajes.html#heroe1">Héroe del mes</a></li>
-                    <li><a href="mapas.html#mapa_nuevo">Nuevo mapa: Bosque Encantado</a></li>
-                    <li><a href="estrategias.html">Guía de estrategias avanzadas</a></li>
-                </ul>
+            <section id="imagenes-proyecto" class="section-block">
+                <h2>Imágenes del Proyecto</h2>
+                <div class="galeria">
+                    <img src="imagenes index/Captura de pantalla de 2024-08-03 22-45-32.png" alt="Descripción de la imagen 1">
+                    <img src="ruta-a-tu-imagen-2.jpg" alt="Descripción de la imagen 2">
+                    <img src="ruta-a-tu-imagen-3.jpg" alt="Descripción de la imagen 3">
+                    <!-- Añade más imágenes según sea necesario -->
+                </div>
             </section>
         </main>
-
-        <footer>
-            <p>&copy; 2023 Wiki de Táctica Pixel. Todos los derechos reservados.</p>
-            <nav>
-                <ul>
-                    <li><a href="privacidad.html">Privacidad</a></li>
-                    <li><a href="terminos.html">Términos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </footer>
     </div>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <footer></footer>
+
+    <script src="header_Footer_Global/header_Footer.js"></script>
 </body>
 </html>
