@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-color: #4a4a4a;
+    --secondary-color: #50fa7b;
+    --background-color: #282a36;
+    --text-color: #f8f8f2;
+    --accent-color: #ff79c6;
+    --block-background: #44475a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px; /* Ajusta este valor según la altura de tu header */
+}
+
+.container {
+    flex: 1 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    display: flex;
+    background: var(--primary-color);
+    padding: 20px;
+    margin-top: 3em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    position: sticky;
+    top: 120px; /* Ajusta este valor según la altura de tu header */
+    height: calc(100vh - 120px); /* Ajusta este valor según la altura de tu header */
+    overflow-y: auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-right: 2px solid var(--accent-color);
+}
+
+.sidebar h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.sidebar a:hover {
+    color: var(--accent-color);
+}
+
+h1, h2 {
+    color: var(--secondary-color);
+}
+
+.content-block {
+    background-color: var(--block-background);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-block h2 {
+    margin-top: 0;
+}

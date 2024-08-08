@@ -10,12 +10,12 @@ function createHeaderAndFooter() {
 
     // Crear el contenido del header
     const headerContent = `
-        <h1>Wiki de Táctica Pixel</h1>
+        <h1>Orbiton</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="mapas.html">General</a></li>
+                <li><a href="../General/general.html">General</a></li>
                 <li><a href="../contacto/contacto.html">Contacto</a></li>
                 <li><a href="../Registro/registro.html">Registro</a></li>
             </ul>
@@ -29,7 +29,7 @@ function createHeaderAndFooter() {
             <ul>
                 <li><a href="privacidad.html">Privacidad</a></li>
                 <li><a href="terminos.html">Términos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     `;
