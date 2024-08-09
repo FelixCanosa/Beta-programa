@@ -10,7 +10,15 @@ function createHeaderAndFooter() {
 
     // Crear el contenido del header
     const headerContent = `
+    <div class="header-container">
         <h1>Orbiton</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -20,7 +28,8 @@ function createHeaderAndFooter() {
                 <li><a href="../Registro/registro.html">Registro</a></li>
             </ul>
         </nav>
-    `;
+    </div>
+`;
 
     // Crear el contenido del footer
     const footerContent = `
@@ -69,4 +78,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Añadir el evento de scroll
     window.addEventListener('scroll', handleScroll);
+});
+
+
+//manejar la funcionalidad del menú hamburguesa
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    const body = document.body;
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        body.classList.toggle('menu-open');
+        
+        if (menuToggle.classList.contains('active')) {
+            menuToggle.setAttribute('aria-expanded', 'true');
+        } else {
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('header nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
 });

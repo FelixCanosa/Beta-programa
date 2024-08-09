@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -31,7 +31,7 @@ body {
 
 .container {
     flex: 1 0 auto;
-    width: 80%;
+    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -39,6 +39,7 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
     background: var(--primary-color);
     padding: 20px;
     margin-top: 3em;
@@ -48,19 +49,20 @@ main {
 }
 
 .content {
-    width: 75%;
-    padding-left: 20px;
+    width: 100%;
+    padding-left: 0;
 }
 
 .sidebar {
-    width: 25%;
-    position: sticky;
-    top: 120px; /* Ajusta este valor según la altura de tu header */
-    height: calc(100vh - 120px); /* Ajusta este valor según la altura de tu header */
-    overflow-y: auto;
+    width: 100%;
+    position: static;
+    height: auto;
+    overflow-y: visible;
     padding: 20px;
     background-color: var(--primary-color);
-    border-right: 2px solid var(--accent-color);
+    border-right: none;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 20px;
 }
 
 .sidebar h3 {
@@ -101,4 +103,54 @@ h1, h2 {
 
 .content-block h2 {
     margin-top: 0;
+}
+
+/* Media Queries para diseño responsivo */
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 25%;
+        position: sticky;
+        top: 120px; /* Ajusta este valor según la altura de tu header */
+        height: calc(100vh - 120px); /* Ajusta este valor según la altura de tu header */
+        overflow-y: auto;
+        border-right: 2px solid var(--accent-color);
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .content {
+        width: 75%;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding-top: 80px; /* Ajusta este valor para pantallas más pequeñas */
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    main {
+        margin-top: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .sidebar a {
+        font-size: 0.7em;
+    }
 }
