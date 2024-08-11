@@ -22,18 +22,23 @@ func _process(_delta):
 	else:
 		$StartButton.disabled = false
 		
-func prompt_with_history() -> String:
-	if (conversation_history.size() > max_history):
-		conversation_history.remove_at(0)
-	var prompt = "" 
-	for d in conversation_history:
-		if (d.character == "a"):
-			prompt += "<|im_start|>user\n" + d.text +"<|im_end|>\n" 
-		else:
-			prompt += "<|im_start|>system\n" + d.text  + "<|im_end|>\n"
-	prompt += "<|im_start|>system\n"
-	#print(prompt)
-	return prompt
+var prompt = "<bos>"
+
+var start_index = max(1, conversation_history.size() - max_history)
+for i in range(start_index, conversation_history.size()):
+	var d = conversation_history[i]
+	prompt += "<start_of_turn>"
+	if d.character == "system":
+		prompt += "system\n" + d.text
+	elif d.character == "user":
+		prompt += "user\n" + d.text
+	elif d.character == "assistant":
+		prompt += "model\n" + d.text
+	prompt += "<end_of_turn>\n"
+
+# Añadir la entrada actual del usuario
+prompt += "<start_of_turn>user\n" + user_input + "<end_of_turn>\n"
+prompt += "<start_of_turn>model\n"
 
 func _on_start_button_pressed():
 	var user_input = $TextEdit.text + "\n"# Asume que TextEdit es el nodo donde el usuario introduce su entrada
