@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kgvum3hypaho"
-path="res://.godot/imported/5TX Tileset Wall.png-f32ff4bb97cee7f7767c85b7740feb07.ctex"
+uid="uid://cy3hgaelieu56"
+path="res://.godot/imported/sombra2.png-8d0d5e57b2cd904a37c627f27bd747d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Texture/5TX Tileset Wall.png"
-dest_files=["res://.godot/imported/5TX Tileset Wall.png-f32ff4bb97cee7f7767c85b7740feb07.ctex"]
+source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Props/Texture/sombra2.png"
+dest_files=["res://.godot/imported/sombra2.png-8d0d5e57b2cd904a37c627f27bd747d3.ctex"]
 
 [params]
 

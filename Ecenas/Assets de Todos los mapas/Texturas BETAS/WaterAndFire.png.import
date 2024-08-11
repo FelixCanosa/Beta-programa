@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxfr5cdiygub5"
-path="res://.godot/imported/gentle forest v01.png-bd49da4655423e25f655ab670b431360.ctex"
+uid="uid://3fme5hsumjbk"
+path="res://.godot/imported/WaterAndFire.png-92979790f12b529c53453c5ec6b37d6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/gentle forest v01.png"
-dest_files=["res://.godot/imported/gentle forest v01.png-bd49da4655423e25f655ab670b431360.ctex"]
+source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/WaterAndFire.png"
+dest_files=["res://.godot/imported/WaterAndFire.png-92979790f12b529c53453c5ec6b37d6c.ctex"]
 
 [params]
 

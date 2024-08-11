@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f7nx4aoocsta"
-path="res://.godot/imported/6TX Struct.png-ea19ead1dbc5f8592397af52b8828302.ctex"
+uid="uid://dfgnenef03j7w"
+path="res://.godot/imported/32x32_DEMO.png-79f995ab22d1977b2036d2300f47ae47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Texture/6TX Struct.png"
-dest_files=["res://.godot/imported/6TX Struct.png-ea19ead1dbc5f8592397af52b8828302.ctex"]
+source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Toxico/32x32_DEMO.png"
+dest_files=["res://.godot/imported/32x32_DEMO.png-79f995ab22d1977b2036d2300f47ae47.ctex"]
 
 [params]
 

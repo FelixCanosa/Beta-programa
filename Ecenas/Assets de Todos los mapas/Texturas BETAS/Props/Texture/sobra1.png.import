@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwaw7oya7uo61"
-path="res://.godot/imported/sobra1.png-41df5826750cbf62c2cd1d60da163a68.ctex"
+path="res://.godot/imported/sobra1.png-43297dbc03773cda360dcc57e85c3aeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Texture/sobra1.png"
-dest_files=["res://.godot/imported/sobra1.png-41df5826750cbf62c2cd1d60da163a68.ctex"]
+source_file="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Props/Texture/sobra1.png"
+dest_files=["res://.godot/imported/sobra1.png-43297dbc03773cda360dcc57e85c3aeb.ctex"]
 
 [params]
 
