@@ -10,17 +10,26 @@ function createHeaderAndFooter() {
 
     // Crear el contenido del header
     const headerContent = `
-        <h1>Wiki de Táctica Pixel</h1>
+    <div class="header-container">
+        <h1>Orbiton</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="mapas.html">General</a></li>
+                <li><a href="../General/general.html">General</a></li>
                 <li><a href="../contacto/contacto.html">Contacto</a></li>
                 <li><a href="../Registro/registro.html">Registro</a></li>
             </ul>
         </nav>
-    `;
+    </div>
+`;
 
     // Crear el contenido del footer
     const footerContent = `
@@ -29,7 +38,7 @@ function createHeaderAndFooter() {
             <ul>
                 <li><a href="privacidad.html">Privacidad</a></li>
                 <li><a href="terminos.html">Términos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     `;
@@ -69,4 +78,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Añadir el evento de scroll
     window.addEventListener('scroll', handleScroll);
+});
+
+
+//manejar la funcionalidad del menú hamburguesa
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    const body = document.body;
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        body.classList.toggle('menu-open');
+        
+        if (menuToggle.classList.contains('active')) {
+            menuToggle.setAttribute('aria-expanded', 'true');
+        } else {
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('header nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
 });
