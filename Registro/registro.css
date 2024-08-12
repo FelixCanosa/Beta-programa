@@ -8,11 +8,17 @@
     --accent-color: #ff79c6;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+
 
 body {
     font-family: 'Press Start 2P', cursive;
@@ -21,8 +27,9 @@ body {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    padding-top: 80px; /* Reducido para dispositivos móviles */
 }
+
 
 .container {
     flex: 1 0 auto;
@@ -37,8 +44,8 @@ body {
 main {
     flex: 1 0 auto;
     background: var(--primary-color);
-    padding: 2rem;
-    margin-top: 8em;
+    padding: 1rem;
+    margin-top: 2em;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -91,7 +98,7 @@ input[type="password"]:focus {
     box-shadow: 0 0 5px var(--accent-color);
 }
 
-button {
+#boton {
     display: block;
     width: 100%;
     padding: 15px;
@@ -106,7 +113,7 @@ button {
     text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} 
 
 button:hover {
     background-color: var(--accent-color);
