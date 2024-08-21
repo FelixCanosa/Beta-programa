@@ -7,10 +7,20 @@
     <title>Asistente AI</title>
 </head>
 <body>
-    <div id="chatbox"></div>
-    <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
-    <button onclick="sendMessage()">Enviar</button>
+    <header></header>
+    <div class="container">
+        <main>
+            <h2>Asistente AI</h2>
+            <div id="chatbox"></div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+                <button onclick="sendMessage()" id="sendButton">Enviar</button>
+            </div>
+        </main>
+    </div>
+    <script src="../header_Footer_Global/header_Footer.js"></script>
+    <script src="gemini_log.js"></script>
+    
+    <footer></footer>
 </body>
-
-<script src="gemini_log.js"></script>
 </html>
