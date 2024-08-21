@@ -65,3 +65,34 @@ Beta-programa
 └─ index.html
 
 ```
+
+```
+Beta-programa
+
+├─ ASITENTE
+│  └─ asistente.html
+├─ General
+│  ├─ general.css
+│  └─ general.html
+├─ README.md
+├─ Registro
+│  ├─ registro.css
+│  └─ registro.html
+├─ Scritps
+├─ contacto
+│  ├─ contacto.css
+│  └─ contacto.html
+├─ estilo.css
+├─ header_Footer_Global
+│  ├─ header_Footer.js
+│  └─ header_footer.css
+├─ imagenes index
+│  ├─ Captura de pantalla de 2024-08-03 22-45-32.png
+│  ├─ Captura de pantalla de 2024-08-03 22-45-32.png.import
+│  ├─ Designer.png
+│  ├─ Designer.png.import
+│  ├─ heroe.png
+│  └─ heroe.png.import
+└─ index.html
+
+```
