@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente AI</title>
+    <style>
+        #chatbox {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        #userInput {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+    <button onclick="sendMessage()">Enviar</button>
+
+    <script>
+        const BACKEND_URL = 'https://tuusername.pythonanywhere.com/chatbot';
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatbox = document.getElementById('chatbox');
+
+            // Mostrar el mensaje del usuario
+            chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
+
+            try {
+                // Llamar a la API del chatbot
+                const response = await fetch(BACKEND_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userInput })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Mostrar la respuesta del chatbot
+                chatbox.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
+            } catch (error) {
+                console.error('Error:', error);
+                chatbox.innerHTML += `<p><strong>Error:</strong> No se pudo conectar con el chatbot.</p>`;
+            }
+
+            // Limpiar el input
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+
+    </main>
+</body>
+</html>
