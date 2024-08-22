@@ -5,7 +5,7 @@ async function sendMessage() {
     const chatbox = document.getElementById('chatbox');
 
     // Mostrar el mensaje del usuario
-    chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
+    appendMessage('Tú', userInput);
 
     try {
         // Llamar a la API del chatbot
@@ -24,12 +24,41 @@ async function sendMessage() {
         const data = await response.json();
 
         // Mostrar la respuesta del chatbot
-        chatbox.innerHTML += `<p><strong>Chatbot:</strong> ${data.response}</p>`;
+        appendMessage('Chatbot', data.response);
     } catch (error) {
         console.error('Error:', error);
-        chatbox.innerHTML += `<p><strong>Error:</strong> No se pudo conectar con el chatbot.</p>`;
+        appendMessage('Error', 'No se pudo conectar con el chatbot.');
     }
 
     // Limpiar el input
     document.getElementById('userInput').value = '';
 }
+
+function appendMessage(sender, message) {
+    const chatbox = document.getElementById('chatbox');
+    const messageElement = document.createElement('div');
+    messageElement.className = sender.toLowerCase() === 'tú' ? 'user-message' : 'ai-message';
+
+    // Convertir Markdown a HTML si el sender es 'Chatbot'
+    const formattedMessage = sender === 'Chatbot' ? marked.parse(message) : escapeHtml(message);
+
+    messageElement.innerHTML = `<strong>${sender}:</strong> ${formattedMessage}`;
+    chatbox.appendChild(messageElement);
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+}
+
+// Evento para enviar mensaje al presionar Enter
+document.getElementById('userInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
