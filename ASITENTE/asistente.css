@@ -55,6 +55,46 @@ h2 {
     margin-bottom: 2rem;
 }
 
+#chatbox .ai-message img {
+    max-width: 100%;
+    height: auto;
+}
+
+#chatbox .ai-message pre {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+#chatbox .ai-message code {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--secondary-color);
+}
+
+#chatbox .ai-message blockquote {
+    border-left: 3px solid var(--secondary-color);
+    margin: 0;
+    padding-left: 10px;
+    color: #a0a0a0;
+}
+
+#chatbox .ai-message table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#chatbox .ai-message th, 
+#chatbox .ai-message td {
+    border: 1px solid var(--secondary-color);
+    padding: 8px;
+    text-align: left;
+}
+
+#chatbox .ai-message th {
+    background-color: var(--primary-color);
+}
+
 #chatbox {
     height: 400px;
     border: 2px solid var(--secondary-color);
