@@ -49,10 +49,38 @@ gantt
     Implementación de efectos y sonidos :b10, after b9, 8d
 ```
 
+# Registro de Actualizaciones del Proyecto
 
-```
+## 2024
 
-```
+### Mayo
+
+#### 25 de agosto de 2024 (4 horas de implementación)
+
+- 🎮 Nuevo prototipo del juego de Godot exportado directamente en la web
+  - Etapa muy temprana de desarrollo
+  - Exportado para funcionar en navegadores web
+  - ![Captura del prototipo del juego](ruta/a/la/imagen.png)
+
+- 📝 Inicio de la documentación del proceso de desarrollo
+  - Este medio se utilizará para documentar todo el proceso de creación y evolución del juego
+
+### Junio
+
+#### [Espacio para futuras actualizaciones]
+
+### Julio
+
+#### [Espacio para futuras actualizaciones]
+
+## 2024
+
+### [Espacio para futuros meses y actualizaciones]
+
+---
+
+Última actualización: 30 de mayo de 2023
+
 
 ```
 Beta-programa
