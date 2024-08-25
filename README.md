@@ -49,6 +49,8 @@ gantt
     Implementación de efectos y sonidos :b10, after b9, 8d
 ```
 
+---
+
 # Registro de Actualizaciones del Proyecto en mas
 
 ## 2024
@@ -69,7 +71,6 @@ gantt
 
 ---
 
-Última actualización: 30 de mayo de 2023
 
 
 ```
