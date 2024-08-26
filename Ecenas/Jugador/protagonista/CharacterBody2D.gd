@@ -38,5 +38,3 @@ func update_animations(move_direciton):
 	else:
 		animationa_playback.travel("descansar") 
 		
-
-

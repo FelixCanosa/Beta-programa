@@ -32,7 +32,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_aht36"]
 resource_name = "adelante"
-length = 0.6
+length = 1.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,15 +41,15 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(2, 2), Vector2i(0, 2)]
+"values": [Vector2i(2, 2), Vector2i(1, 2), Vector2i(0, 2), Vector2i(1, 2)]
 }
 
 [sub_resource type="Animation" id="Animation_5aw3i"]
 resource_name = "atras"
-length = 0.6
+length = 1.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -58,14 +58,15 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(2, 0), Vector2i(0, 0)]
+"values": [Vector2i(2, 0), Vector2i(1, 0), Vector2i(0, 0), Vector2i(1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_m304q"]
 resource_name = "left"
+length = 1.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -74,15 +75,15 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(2, 1), Vector2i(1, 1), Vector2i(0, 1)]
+"values": [Vector2i(2, 1), Vector2i(1, 1), Vector2i(0, 1), Vector2i(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_1cdcm"]
 resource_name = "quieto_adelante"
-length = 0.4
+length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -99,7 +100,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_istta"]
 resource_name = "quieto_atras"
-length = 0.4
+length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -116,7 +117,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hsdad"]
 resource_name = "quieto_derecha"
-length = 0.4
+length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -133,7 +134,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_he1yn"]
 resource_name = "quieto_izquierda"
-length = 0.4
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -149,6 +150,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_f03c3"]
 resource_name = "right"
+length = 1.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -157,10 +159,10 @@ tracks/0/path = NodePath(".:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3)]
+"values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(1, 3)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kavey"]
@@ -247,18 +249,20 @@ states/caminar/node = SubResource("AnimationNodeBlendSpace2D_5nayb")
 states/caminar/position = Vector2(396, 100)
 transitions = ["Start", "caminar", SubResource("AnimationNodeStateMachineTransition_36cwa"), "caminar", "Reposo", SubResource("AnimationNodeStateMachineTransition_0qmw0"), "Reposo", "caminar", SubResource("AnimationNodeStateMachineTransition_ske2l")]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j1xhe"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdlj2"]
+size = Vector2(18, 21)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(5, 8)
 script = ExtResource("1_35710")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(260.25, 124)
+position = Vector2(0.750031, 23)
 scale = Vector2(2.22917, 2)
 texture = ExtResource("1_lxhfw")
+offset = Vector2(0, -15)
 hframes = 3
 vframes = 4
 frame = 7
@@ -277,10 +281,10 @@ parameters/Reposo/blend_position = Vector2(0.0721476, 0.466667)
 parameters/caminar/blend_position = Vector2(-0.00635928, 0.00973463)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(261, 145)
-shape = SubResource("CircleShape2D_j1xhe")
+position = Vector2(0.750031, 13)
+shape = SubResource("RectangleShape2D_xdlj2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(257, 140)
+position = Vector2(-14.25, -2)
 zoom = Vector2(0.635, 0.635)
 position_smoothing_enabled = true
