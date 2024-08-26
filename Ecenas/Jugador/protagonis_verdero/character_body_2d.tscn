@@ -206,6 +206,7 @@ animation = &"atras"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a5nnj"]
 animation = &"adelante"
+play_mode = 1
 use_custom_timeline = true
 timeline_length = 1.0
 stretch_time_scale = true
@@ -269,10 +270,11 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="Sprite2D"]
+deterministic = false
 tree_root = SubResource("AnimationNodeStateMachine_3iamy")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Reposo/blend_position = Vector2(0.0721476, 0.466667)
-parameters/caminar/blend_position = Vector2(-0.116057, 0.631915)
+parameters/caminar/blend_position = Vector2(-0.00635928, 0.00973463)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(261, 145)
