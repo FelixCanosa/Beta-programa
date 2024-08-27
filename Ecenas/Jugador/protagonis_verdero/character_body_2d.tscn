@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cy8vgt3kt51vm"]
+[gd_scene load_steps=29 format=3 uid="uid://cy8vgt3kt51vm"]
 
 [ext_resource type="Script" path="res://Ecenas/Jugador/protagonis_verdero/jugador_de_verdad.gd" id="1_35710"]
 [ext_resource type="Texture2D" uid="uid://dogcmjmy1i1r1" path="res://Ecenas/Jugador/protagonis_verdero/base-m-ash.png" id="1_lxhfw"]
@@ -241,26 +241,29 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ske2l"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o2axl"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3iamy"]
 states/End/position = Vector2(759, 107)
 states/Reposo/node = SubResource("AnimationNodeBlendSpace2D_gbj0p")
 states/Reposo/position = Vector2(621, 100)
 states/caminar/node = SubResource("AnimationNodeBlendSpace2D_5nayb")
 states/caminar/position = Vector2(396, 100)
-transitions = ["Start", "caminar", SubResource("AnimationNodeStateMachineTransition_36cwa"), "caminar", "Reposo", SubResource("AnimationNodeStateMachineTransition_0qmw0"), "Reposo", "caminar", SubResource("AnimationNodeStateMachineTransition_ske2l")]
+transitions = ["Start", "caminar", SubResource("AnimationNodeStateMachineTransition_36cwa"), "caminar", "Reposo", SubResource("AnimationNodeStateMachineTransition_0qmw0"), "Reposo", "caminar", SubResource("AnimationNodeStateMachineTransition_ske2l"), "Reposo", "End", SubResource("AnimationNodeStateMachineTransition_o2axl")]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdlj2"]
-size = Vector2(18, 21)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0vp0x"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(5, 8)
+y_sort_enabled = true
 script = ExtResource("1_35710")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(0.750031, 23)
-scale = Vector2(2.22917, 2)
+position = Vector2(0, -1)
+scale = Vector2(2.18229, 1.99023)
 texture = ExtResource("1_lxhfw")
 offset = Vector2(0, -15)
 hframes = 3
@@ -281,10 +284,11 @@ parameters/Reposo/blend_position = Vector2(0.0721476, 0.466667)
 parameters/caminar/blend_position = Vector2(-0.00635928, 0.00973463)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.750031, 13)
-shape = SubResource("RectangleShape2D_xdlj2")
+y_sort_enabled = true
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_0vp0x")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-14.25, -2)
+position = Vector2(0, -20)
 zoom = Vector2(0.635, 0.635)
 position_smoothing_enabled = true
