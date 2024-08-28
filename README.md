@@ -1,25 +1,5 @@
 [Nuestra web](https://beta-web-llm.netlify.app/index.html)
 
-**Integrantes actuales**
----------------
-- Félix Francisco Canosa
-- Tiziano Aguilar
-- Carlos Gomes
---> ventana  510px de ancho y 290px de alto
-
-**¿De qué trata?**
-=====================
-
-**Pantallazo general**
---------------------
-
-Un juego (programa) educativo, sostenible y que concientiza el cuidado de la naturaleza a través del interativo diálogo generado por IAs (MLL) y el motor gráfico Godot Engine para sostener la arquitectura y lógica del juego.
-
-**Premisa del juego**
---------------------
-
-La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.
-
 
 **Integrantes actuales**
 ---------------
