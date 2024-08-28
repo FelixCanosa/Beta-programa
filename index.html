@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Gantt y PERT del Proyecto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .mermaid {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Diagramas del Proyecto Orbiton</h1>
+        
+        <h2>Diagrama de Gantt</h2>
+        <div class="mermaid">
+            gantt
+                title Desarrollo del Proyecto OrBER y Página Web
+                dateFormat  YYYY-MM-DD
+                section Juego Alpha 1.0
+                Configuración de Godot Engine      :done, a1, 2024-01-01, 14d
+                Implementación de Godot LLM (IA) - Prototipo :done, a2, after a1, 21d
+                Diseño del personaje principal     :done, a3, 2024-01-15, 14d
+                Creación del bosque milenario (En progreso) :active, a4, after a3, 21d
+                Refinamiento de prototipos IA      :a5, after a2, 30d
+                Mecánicas básicas del jugador      :a6, after a4, 14d
+                Implementación de diálogos IA      :a7, after a5, 21d
+                Sistema de misiones básico         :a8, after a6 a7, 14d
+                Optimización y pruebas             :a9, after a8, 14d
+                
+                section Update 2.0
+                Diseño del pueblo a las afueras    :b1, 2024-07-01, 21d
+                Mejora de mecánicas del jugador    :b2, after b1, 14d
+                Implementación de NPCs con IA      :b3, after b2, 21d
+                Sistema de misiones avanzado       :b4, after b3, 14d
+                Integración de temas ambientales   :b5, after b4, 14d
+                Implementación de efectos y sonidos :b6, after b5, 10d
+                Optimización para múltiples plataformas :b7, after b6, 14d
+                Pruebas de usuario y ajustes       :b8, after b7, 14d
+                
+                section Lanzamiento y Mantenimiento
+                Preparación para lanzamiento       :c1, 2024-12-01, 14d
+                Lanzamiento versión beta           :milestone, c2, after c1, 0d
+                Recopilación de feedback           :c3, after c2, 21d
+                Actualizaciones y correcciones     :c4, after c3, 30d
+                Desarrollo de contenido adicional  :c5, after c4, 60d
+            
+                section Página Web (Wiki)
+                Diseño inicial Frontend            :done, w1, 2024-01-01, 30d
+                Implementación sección Home        :done, w2, after w1, 7d
+                Implementación sección Personajes  :active, w3, after w2, 14d
+                Implementación sección General     :w4, after w3, 14d
+                Implementación sección Registro    :w5, after w4, 7d
+                Implementación sección Nosotros    :w6, after w5, 7d
+                Refinamiento del Frontend          :w7, after w6, 21d
+                Diseño de la arquitectura Backend  :w8, 2024-10-01, 21d
+                Desarrollo del Backend             :w9, after w8, 45d
+                Integración Frontend-Backend       :w10, after w9, 30d
+                Pruebas y optimización             :w11, after w10, 21d
+                Lanzamiento de la página web       :milestone, w12, after w11, 0d
+                Mantenimiento y actualizaciones    :w13, after w12, 90d
+        </div>
+
+        <h2>Diagrama de PERT 1, El juego</h2>
+        <div class="mermaid">
+            graph TD
+            subgraph Juego Alpha 1.0
+                A1["A1: Configuración de Godot Engine<br>Inicio: 2024-01-01<br>Fin: 2024-01-14"] --> A2["A2: Implementación de Godot LLM (IA) - Prototipo<br>Inicio: 2024-01-15<br>Fin: 2024-02-04"]
+                A2 --> A5["A5: Refinamiento de prototipos IA<br>Inicio: 2024-02-05<br>Fin: 2024-03-05"]
+                A5 --> A7["A7: Implementación de diálogos IA<br>Inicio: 2024-03-06<br>Fin: 2024-03-26"]
+                A7 --> A8["A8: Sistema de misiones básico<br>Inicio: 2024-03-27<br>Fin: 2024-04-09"]
+                A8 --> A9["A9: Optimización y pruebas<br>Inicio: 2024-04-10<br>Fin: 2024-04-23"]
+                
+                A3["A3: Diseño del personaje principal<br>Inicio: 2024-01-15<br>Fin: 2024-01-28"] --> A4["A4: Creación del bosque milenario<br>Inicio: 2024-01-29<br>Fin: 2024-02-18"]
+                A4 --> A6["A6: Mecánicas básicas del jugador<br>Inicio: 2024-02-19<br>Fin: 2024-03-03"]
+                
+                A6 --> A8
+            end
+        
+            subgraph Update 2.0
+                B1["B1: Diseño del pueblo a las afueras<br>Inicio: 2024-07-01<br>Fin: 2024-07-21"] --> B2["B2: Mejora de mecánicas del jugador<br>Inicio: 2024-07-22<br>Fin: 2024-08-04"]
+                B2 --> B3["B3: Implementación de NPCs con IA<br>Inicio: 2024-08-05<br>Fin: 2024-08-25"]
+                B3 --> B4["B4: Sistema de misiones avanzado<br>Inicio: 2024-08-26<br>Fin: 2024-09-08"]
+                B4 --> B5["B5: Integración de temas ambientales<br>Inicio: 2024-09-09<br>Fin: 2024-09-22"]
+                B5 --> B6["B6: Implementación de efectos y sonidos<br>Inicio: 2024-09-23<br>Fin: 2024-10-02"]
+                B6 --> B7["B7: Optimización para múltiples plataformas<br>Inicio: 2024-10-03<br>Fin: 2024-10-16"]
+                B7 --> B8["B8: Pruebas de usuario y ajustes<br>Inicio: 2024-10-17<br>Fin: 2024-10-30"]
+            end
+        </div>
+
+        <h2>Diagrama de PERT 2, Desarrollo Web</h2>
+        <div class="mermaid">
+            graph TD
+            subgraph Página Web 
+                W1["W1: Diseño inicial Frontend<br>Inicio: 2024-01-01<br>Fin: 2024-01-30"]
+                W2["W2: Implementación sección Home<br>Inicio: 2024-01-31<br>Fin: 2024-02-06"]
+                W3["W3: Implementación sección Personajes<br>Inicio: 2024-02-07<br>Fin: 2024-02-20"]
+                W4["W4: Implementación sección General<br>Inicio: 2024-02-21<br>Fin: 2024-03-05"]
+                W5["W5: Implementación sección Registro<br>Inicio: 2024-03-06<br>Fin: 2024-03-12"]
+                W6["W6: Implementación sección Nosotros<br>Inicio: 2024-03-13<br>Fin: 2024-03-19"]
+                W7["W7: Refinamiento del Frontend<br>Inicio: 2024-03-20<br>Fin: 2024-04-09"]
+        
+                W8["W8: Diseño de la arquitectura Backend<br>Inicio: 2024-10-01<br>Fin: 2024-10-21"]
+                W9["W9: Desarrollo del Backend<br>Inicio: 2024-10-22<br>Fin: 2024-12-05"]
+                W9a["W9a: Integración de API de Gemmini para chatbot<br>Inicio: 2024-10-25<br>Fin: 2024-11-10"]
+                W9b["W9b: Implementación de la Tabla Usuario<br>Inicio: 2024-11-11<br>Fin: 2024-11-20"]
+                W10["W10: Integración Frontend-Backend<br>Inicio: 2024-12-06<br>Fin: 2024-01-04"]
+                W11["W11: Pruebas y optimización<br>Inicio: 2024-01-05<br>Fin: 2024-01-25"]
+                W12["W12: Lanzamiento de la página web<br>Inicio: 2024-01-26<br>Fin: 2024-01-26"]
+                W13["W13: Mantenimiento y actualizaciones<br>Inicio: 2024-01-27<br>Fin: 2024-04-26"]
+        
+                %% Relaciones del Frontend
+                W1 --> W2
+                W1 --> W3
+                W1 --> W4
+                W2 --> W7
+                W3 --> W7
+                W4 --> W7
+                W5 --> W7
+                W6 --> W7
+        
+                %% Relaciones Backend y Lanzamiento
+                W7 --> W8
+                W8 --> W9
+                W9 --> W9a
+                W9 --> W9b
+                W9a --> W10
+                W9b --> W10
+                W10 --> W11
+                W11 --> W12
+                W12 --> W13
+            end
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
