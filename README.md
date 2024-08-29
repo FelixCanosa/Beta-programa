@@ -90,7 +90,7 @@ gantt
 - 📝 Inicio de la documentación del proceso de desarrollo
   - Este medio se utilizará para documentar todo el proceso de creación y evolución del juego
 
-
+[![Título del Video](https://img.youtube.com/vi/_rCgBa5-MK4/0.jpg)](https://youtu.be/_rCgBa5-MK4)
 
 ---
 
