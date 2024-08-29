@@ -74,7 +74,7 @@ gantt
 
 ---
 
-# Registro de Actualizaciones del Proyecto en mas
+# Registro de Actualizaciones del Proyecto
 
 ## 2024
 
@@ -90,7 +90,36 @@ gantt
 - 📝 Inicio de la documentación del proceso de desarrollo
   - Este medio se utilizará para documentar todo el proceso de creación y evolución del juego
 
-[![Título del Video](https://img.youtube.com/vi/_rCgBa5-MK4/0.jpg)](https://youtu.be/_rCgBa5-MK4)
+
+
+#### 28 de noviembre de 2024 (6 horas de implementación)
+
+- 🦋 Implementación de NPC Mariposa
+  - Primer NPC ambiental añadido al mundo del juego
+  - Mejora la inmersión y la vivacidad del entorno
+
+##### Características principales:
+
+- Implementación de un NPC mariposa utilizando CharacterBody2D
+- Movimiento autónomo con NavigationRegion2D para un vuelo realista
+- Animaciones fluidas con AnimatedSprite2D, incluyendo direcciones up, down, left, y right
+- Sistema de puntos de navegación para definir la ruta de vuelo de la mariposa
+
+##### Nodos utilizados:
+- CharacterBody2D
+- NavigationAgent2D
+- AnimatedSprite2D
+
+##### Captura de pantalla:
+
+![Captura de la Mariposa NPC](https://iili.io/djPTCBI.png)
+
+##### Video demostrativo:
+
+[Ver video completo en YouTube](https://youtu.be/_rCgBa5-MK4)
+
+
+
 
 ---
 
