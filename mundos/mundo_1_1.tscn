@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c8m7qf3lapga0"]
+[gd_scene load_steps=32 format=3 uid="uid://c8m7qf3lapga0"]
 
 [ext_resource type="Texture2D" uid="uid://bk2gq6w44bfer" path="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Tilesets and props Demo.png" id="1_2k5mw"]
 [ext_resource type="Texture2D" uid="uid://bwqwcvea1m3a4" path="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/PathAndObjects.png" id="2_ydotd"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b8oivwwjm2o1h" path="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Props/Texture/1.png" id="9_w27pj"]
 [ext_resource type="Texture2D" uid="uid://dfgnenef03j7w" path="res://Ecenas/Assets de Todos los mapas/Texturas BETAS/Toxico/32x32_DEMO.png" id="10_ts3m4"]
 [ext_resource type="PackedScene" uid="uid://cy8vgt3kt51vm" path="res://Ecenas/Jugador/protagonis_verdero/character_body_2d.tscn" id="13_c27fn"]
+[ext_resource type="PackedScene" uid="uid://ddvqvm6bk21nr" path="res://Ecenas/NPCs/Maripoza/mariposa.tscn" id="15_p5tvo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x03av"]
 texture = ExtResource("2_ydotd")
@@ -2704,3 +2705,6 @@ position = Vector2(3, 49)
 energy = 0.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="DirectionalLight2D"]
+
+[node name="mariposa" parent="." instance=ExtResource("15_p5tvo")]
+position = Vector2(-288, -161)
