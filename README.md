@@ -1,25 +1,5 @@
 [Nuestra web](https://beta-web-llm.netlify.app/index.html)
 
-**Integrantes actuales**
----------------
-- Félix Francisco Canosa
-- Tiziano Aguilar
-- Carlos Gomes
---> ventana  510px de ancho y 290px de alto
-
-**¿De qué trata?**
-=====================
-
-**Pantallazo general**
---------------------
-
-Un juego (programa) educativo, sostenible y que concientiza el cuidado de la naturaleza a través del interativo diálogo generado por IAs (MLL) y el motor gráfico Godot Engine para sostener la arquitectura y lógica del juego.
-
-**Premisa del juego**
---------------------
-
-La premisa sería que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.
-
 
 **Integrantes actuales**
 ---------------
@@ -94,7 +74,7 @@ gantt
 
 ---
 
-# Registro de Actualizaciones del Proyecto en mas
+# Registro de Actualizaciones del Proyecto
 
 ## 2024
 
@@ -109,6 +89,35 @@ gantt
 
 - 📝 Inicio de la documentación del proceso de desarrollo
   - Este medio se utilizará para documentar todo el proceso de creación y evolución del juego
+
+
+
+#### 28 de noviembre de 2024 (6 horas de implementación)
+
+- 🦋 Implementación de NPC Mariposa
+  - Primer NPC ambiental añadido al mundo del juego
+  - Mejora la inmersión y la vivacidad del entorno
+
+##### Características principales:
+
+- Implementación de un NPC mariposa utilizando CharacterBody2D
+- Movimiento autónomo con NavigationRegion2D para un vuelo realista
+- Animaciones fluidas con AnimatedSprite2D, incluyendo direcciones up, down, left, y right
+- Sistema de puntos de navegación para definir la ruta de vuelo de la mariposa
+
+##### Nodos utilizados:
+- CharacterBody2D
+- NavigationAgent2D
+- AnimatedSprite2D
+
+##### Captura de pantalla:
+
+![Captura de la Mariposa NPC](https://iili.io/djPTCBI.png)
+
+##### Video demostrativo:
+
+[Ver video completo en YouTube](https://youtu.be/_rCgBa5-MK4)
+
 
 
 
