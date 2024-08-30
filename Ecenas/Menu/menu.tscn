@@ -72,7 +72,6 @@ texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_px75y")
 theme_override_font_sizes/font_size = 22
-button_mask = 0
 text = "Inicio"
 flat = true
 alignment = 0
