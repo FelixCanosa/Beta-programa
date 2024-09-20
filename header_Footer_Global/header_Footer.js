@@ -11,7 +11,7 @@ function createHeaderAndFooter() {
     // Crear el contenido del header
     const headerContent = `
     <div class="header-container">
-        <h1>Orbiton</h1>
+        <h1>··</h1>
         <button class="menu-toggle" aria-label="Abrir menú">
             <div class="hamburger">
                 <span></span>

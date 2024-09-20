@@ -1,11 +1,11 @@
-
+/* 
 :root {
-    --primary-color: #4a4a4a;
-    --secondary-color: #50fa7b;
-    --background-color: #282a36;
+    --primary-color: #f8f8f8;
+    --secondary-color: #ffffff;
+    --background-color: #ffffff;
     --text-color: #f8f8f2;
     --accent-color: #ff79c6;
-}
+} */
 
 * {
     box-sizing: border-box;
