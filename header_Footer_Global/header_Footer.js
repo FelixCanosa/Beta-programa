@@ -24,7 +24,7 @@ function createHeaderAndFooter() {
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="personajes.html">Personajes</a></li>
                 <li><a href="../General/general.html">General</a></li>
-                <li><a href="../ASITENTE/asistente.html">Asistente</a></li>
+                <li><a href="../ASITENTE/asistente.html">Foro</a></li>
                 <li><a href="../Registro/registro.html">Registro</a></li>
             </ul>
         </nav>
