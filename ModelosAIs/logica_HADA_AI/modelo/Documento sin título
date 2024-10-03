@@ -1,0 +1,6 @@
+	for d in conversation_history:
+		if (d.character == "a"):
+			prompt += "<|im_start|>user\n" + d.text +"<|im_end|>\n" 
+		else:
+			prompt += "<|im_start|>system\n" + d.text  + "<|im_end|>\n"
+	prompt += "<|assistant

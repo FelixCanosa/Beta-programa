@@ -1,0 +1,224 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvnyhrho8spwt"]
+
+[ext_resource type="Script" path="res://ModelosAIs/logica_HADA_AI/LlmDB.gd" id="1_xsn4c"]
+
+[sub_resource type="GDScript" id="GDScript_itx3w"]
+script/source = "extends Control
+
+class ChatData:
+		var character: String
+		var text: String
+
+var conversation_history: Array[ChatData] = []
+var max_history = 5
+
+var current_response = \"\"
+var is_generating = false
+
+@onready var llm_db = $LlmDB  # Referencia a la base de datos vectorial
+
+func _ready():
+		$TextEdit.grab_focus()
+		$GDLlama.context_size = 2096
+		$GDLlama.n_predict = 100  # Ajustar según sea necesario
+		$GDLlama.temperature = 0.5  # Para respuestas más consistentes y menos dispersas
+		$GDLlama.top_p = 0.8  # Limitar la generación a las respuestas más probables
+		
+		$GDLlama.should_output_prompt = false
+		$GDLlama.should_output_special = false
+		
+		$GDLlama.generate_text_updated.connect(_on_gd_llama_generate_text_updated)
+		$GDLlama.generate_text_finished.connect(_on_gd_llama_generate_text_finished)
+
+		# Inicializar la personalidad de la AI
+		var initial_prompt = ChatData.new()
+		initial_prompt.character = \"<|assistant|>\"
+		initial_prompt.text = \"Eres Thistle, un hada bondadosa del bosque encantado. Mantén siempre esta personalidad y responde con amabilidad y disposición para ayudar.\"
+		conversation_history.append(initial_prompt)
+
+
+		llm_db.open_db()
+
+		llm_db.meta = [
+				LlmDBMetaData.create_text(\"id\"),
+				LlmDBMetaData.create_text(\"category\"),
+				LlmDBMetaData.create_text(\"type\")
+		]
+		llm_db.calibrate_embedding_size()
+		llm_db.create_llm_tables()
+
+		# Recuperar la personalidad inicial y contexto desde la base de datos
+		_load_initial_personality_and_context()
+
+func _load_initial_personality_and_context():
+		# Recupera la personalidad y el contexto inicial desde la base de datos
+		var personality = llm_db.retrieve_similar_texts(\"Thistle personality\", \"category='character' AND type='description'\", 1)
+		var context = llm_db.retrieve_similar_texts(\"enchanted forest\", \"category='location' AND type='description'\", 1)
+		
+		if personality.size() > 0:
+				var data = ChatData.new()
+				data.character = \"<|assistant|>\"
+				data.text = personality[0]
+				conversation_history.append(data)
+
+		if context.size() > 0:
+				var context_data = ChatData.new()
+				context_data.character = \"<|assistant|>\"
+				context_data.text = context[0]
+				conversation_history.append(context_data)
+
+func prompt_with_history() -> String:
+		if conversation_history.size() > max_history:
+				conversation_history.remove_at(1)  # Mantener el prompt inicial
+		
+		var prompt = \"\"
+		
+		# Recupera rasgos de personalidad relevantes
+		var last_message = conversation_history[-1].text if conversation_history.size() > 1 else \"\"
+		var relevant_traits = llm_db.retrieve_similar_texts(last_message, \"category='character' AND type='description'\", 3)
+		
+
+		for d in conversation_history:
+				if d.character == \"a\":
+						prompt += \"<|user|>\\n\" + d.text + \"<|end|>\\n\" 
+				elif d.character == \"b\":
+						prompt += \"<|assistant|>\\n\" + d.text + \"<|end|>\\n\"
+				else:  # system
+						prompt += \"<|assistant|>\\n\" + d.text + \"<|end|>\\n\"
+		
+		prompt += \"<|assistant|>\\n\"
+		print(\"Prompt completo:\", prompt)
+		return prompt
+
+func _send_message(new_text: String = \"\"):
+		var user_input = new_text.strip_edges()
+		if user_input.length() > 0:
+				var data = ChatData.new()
+				data.character = \"a\"
+				data.text = user_input 
+				$terminal.append_text(\"\\nUsuario: \" + data.text + \"\\n\")
+				conversation_history.append(data)
+				var prompt: String = prompt_with_history()
+				$GDLlama.run_generate_text(prompt, \"\", \"\")
+				$TextEdit.clear()
+		else:
+				print(\"El mensaje está vacío\")
+		
+		$terminal.scroll_to_line($terminal.get_line_count() - 1)
+
+func _on_gd_llama_generate_text_updated(text):
+		if not is_generating:
+				is_generating = true
+				current_response = \"\"
+				$terminal.append_text(\"\\nAI: \")
+
+		current_response += text
+		$terminal.append_text(text)
+		
+		$terminal.scroll_to_line($terminal.get_line_count() - 1)
+
+func _on_gd_llama_generate_text_finished():
+		is_generating = false
+		
+		var clean_text = current_response.replace(\"<|assistant|>\\n\", \"\").replace(\"<|end|>\", \"\").strip_edges()
+		
+		print(\"Respuesta completa de la AI:\", clean_text)
+		
+		var data = ChatData.new()
+		data.character = \"b\" 
+		data.text = clean_text
+		conversation_history.append(data)
+		
+		# Refrescar la personalidad si la respuesta se desvía
+		if not (clean_text.to_lower().contains(\"bondados\") or 
+						clean_text.to_lower().contains(\"amable\") or 
+						clean_text.to_lower().contains(\"ayudar\") or 
+						clean_text.to_lower().contains(\"amistad\")):
+				var refresh_prompt = llm_db.refresh_thistle_personality()
+				_send_message(refresh_prompt)
+
+		current_response = \"\"
+
+func _on_text_edit_text_changed():
+		var text = $TextEdit.text
+		if text.ends_with(\"\\n\"):
+				_send_message(text.strip_edges())
+				$TextEdit.clear()
+"
+
+[sub_resource type="LlmDBMetaData" id="LlmDBMetaData_xcj38"]
+data_name = "id"
+data_type = 2
+
+[sub_resource type="Gradient" id="Gradient_5jmts"]
+offsets = PackedFloat32Array(0, 0.256917, 0.86166, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.743083, 0.743083, 0.743083, 1, 0.703557, 0.703557, 0.703557, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0t0ih"]
+gradient = SubResource("Gradient_5jmts")
+fill_to = Vector2(0.111111, 0.128205)
+
+[node name="Modelo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_itx3w")
+
+[node name="LlmDB" type="LlmDB" parent="."]
+meta = Array[LlmDBMetaData]([SubResource("LlmDBMetaData_xcj38")])
+model_path = "ModelosAIs/logica_HADA_AI/LLM+RECUP/mxbai-embed-large-v1.Q8_0.gguf"
+script = ExtResource("1_xsn4c")
+
+[node name="GDLlama" type="GDLlama" parent="."]
+model_path = "ModelosAIs/logica_HADA_AI/LLM+RECUP/Phi-3.5-mini-instruct_Uncensored-Q6_K.gguf"
+should_output_prompt = false
+n_predict = 154
+temperature = 0.7
+penalty_repeat = 1.2
+
+[node name="TextEdit" type="TextEdit" parent="."]
+z_index = 1000
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 219.0
+offset_right = 373.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="terminal" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 0.027451, 1)
+z_index = 1000
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.017
+anchor_right = 0.008
+anchor_bottom = 0.017
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 970.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/normal_font_size = 30
+scroll_active = false
+autowrap_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 500
+position = Vector2(256, 110)
+scale = Vector2(8, 3.40625)
+texture = SubResource("GradientTexture2D_0t0ih")
+
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_edit_text_changed"]

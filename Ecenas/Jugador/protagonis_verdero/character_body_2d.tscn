@@ -255,7 +255,7 @@ transitions = ["Start", "caminar", SubResource("AnimationNodeStateMachineTransit
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0vp0x"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 script = ExtResource("1_35710")
 

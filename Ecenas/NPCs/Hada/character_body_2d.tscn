@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq1svum2loqsh"]
+
+[ext_resource type="Script" path="res://Ecenas/NPCs/Hada/hada.gd" id="1_kxomh"]
+
+[sub_resource type="Gradient" id="Gradient_dcito"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4s1w5"]
+gradient = SubResource("Gradient_dcito")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pn8ix"]
+radius = 87.8635
+
+[sub_resource type="Gradient" id="Gradient_1s26q"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u3s4a"]
+gradient = SubResource("Gradient_1s26q")
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_kxomh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_4s1w5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pn8ix")
+
+[node name="InteractionIndicator" type="Sprite2D" parent="."]
+position = Vector2(-41, -47)
+scale = Vector2(0.121094, 32.5)
+texture = SubResource("GradientTexture1D_u3s4a")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
