@@ -2713,15 +2713,11 @@ layer_4/tile_data = PackedInt32Array(-327686, 8, 0, 4, 8, 0, 196619, 8, 0, -4587
 z_index = 1
 texture_filter = 2
 material = SubResource("ShaderMaterial_g3ir4")
-<<<<<<< HEAD
-position = Vector2(26, 155)
-
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="DirectionalLight2D"]
-
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ah84m")
