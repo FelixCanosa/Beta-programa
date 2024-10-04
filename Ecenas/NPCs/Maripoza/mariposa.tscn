@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddvqvm6bk21nr"]
+[gd_scene load_steps=16 format=3 uid="uid://ddvqvm6bk21nr"]
 
 [ext_resource type="Script" path="res://NPC_PRUEBA.gd" id="1_vedeq"]
 [ext_resource type="Texture2D" uid="uid://b0mdse5vpy0g" path="res://Ecenas/NPCs/Maripoza/assets/butterfly.png" id="2_us05b"]
