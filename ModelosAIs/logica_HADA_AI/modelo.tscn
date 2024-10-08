@@ -148,8 +148,6 @@ func _on_text_edit_text_changed():
 "
 
 [sub_resource type="LlmDBMetaData" id="LlmDBMetaData_xcj38"]
-resource_local_to_scene = false
-resource_name = ""
 data_name = "id"
 data_type = 2
 
@@ -165,48 +163,30 @@ grow_vertical = 2
 script = SubResource("GDScript_itx3w")
 
 [node name="LlmDB" type="LlmDB" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-meta = [SubResource("LlmDBMetaData_xcj38")]
+meta = Array[LlmDBMetaData]([SubResource("LlmDBMetaData_xcj38")])
 model_path = "ModelosAIs/logica_HADA_AI/LLM+RECUP/mxbai-embed-large-v1.Q8_0.gguf"
 script = ExtResource("1_xsn4c")
 
 [node name="GDLlama" type="GDLlama" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
 model_path = "ModelosAIs/logica_HADA_AI/LLM+RECUP/Phi-3.5-mini-instruct_Uncensored-Q6_K.gguf"
 should_output_prompt = false
 n_predict = 154
 temperature = 0.7
 penalty_repeat = 1.2
-script = null
 
 [node name="TextEdit" type="TextEdit" parent="."]
 z_index = 1000
 texture_filter = 1
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = 219.0
-offset_right = 373.0
-offset_bottom = 284.0
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = 231.0
+offset_right = 503.0
+offset_bottom = 289.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -222,7 +202,7 @@ anchor_bottom = 0.017
 offset_left = 51.0
 offset_top = 38.0
 offset_right = 871.0
-offset_bottom = 356.0
+offset_bottom = 388.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
@@ -232,6 +212,7 @@ autowrap_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 500
+position = Vector2(-1, 0)
 scale = Vector2(10.7292, 7.71053)
 texture = ExtResource("2_ivdy5")
 centered = false
