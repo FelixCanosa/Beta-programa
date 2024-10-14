@@ -22,10 +22,9 @@ function createHeaderAndFooter() {
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="../Personajes/asistente.html">Personajes</a></li>
                 <li><a href="../General/general.html">General</a></li>
                 <li><a href="../ASITENTE/asistente.html">Foro</a></li>
-                <li><a href="../Registro/registro.html">Registro</a></li>
             </ul>
         </nav>
     </div>
@@ -33,7 +32,7 @@ function createHeaderAndFooter() {
 
     // Crear el contenido del footer
     const footerContent = `
-        <p>&copy; 2024 Wiki de Táctica Pixel. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Wiki de Orbitos. Todos los derechos reservados.</p>
         <nav>
             <ul>
                 <li><a href="privacidad.html">Privacidad</a></li>
