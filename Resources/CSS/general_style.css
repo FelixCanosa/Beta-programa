@@ -1,0 +1,330 @@
+/* Variables globales */
+:root {
+    --primary-color: #f8f8f8;
+    --secondary-color: #ffffff;
+    --background-color: #ffffff;
+    --text-color: #f8f8f2;
+    --accent-color: #ff79c6;
+}
+
+/* Estilos base */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+/* Contenedor principal */
+.container {
+    flex: 1 0 auto;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Estilos de main */
+main {
+    background: var(--primary-color);
+    padding: 15px;
+    margin-top: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de sección */
+.section-block {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilos de texto */
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+/* Estilos de imagen */
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* Estilos de galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Ajustes para listas y contenido en secciones específicas */
+.section-block .section-content ol,
+.section-block .section-content ul {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.section-block .section-content li {
+    margin-bottom: 10px;
+}
+
+.section-block .section-content h3 {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .container {
+        width: 80%;
+        padding: 0 20px;
+    }
+
+    main {
+        padding: 20px;
+        margin-top: 3em;
+    }
+
+    .section-block {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .section-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-content .section-text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .section-content .section-image {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    /* Ajuste específico para secciones con listas largas */
+    .section-block .section-content ol,
+    .section-block .section-content ul {
+        column-count: 2;
+        column-gap: 20px;
+    }
+
+    .section-block .section-content li {
+        break-inside: avoid-column;
+    }
+
+    /* Estilos para la página de contacto en pantallas más grandes */
+    .sidebar {
+        flex: 0 0 250px;
+    }
+
+    .content {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilos específicos para el contenido destacado del SIBER*/
+#destacado ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+#destacado ul li {
+    margin-bottom: 10px;
+}
+
+#destacado ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.8em;
+}
+
+#destacado ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    #destacado .section-content {
+        flex-direction: row-reverse;
+    }
+
+    #destacado .section-content .section-text {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    #destacado ul li a {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para la página de contacto */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page main {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.contact-page .sidebar {
+    position: sticky;
+    top: 120px; /* Ajusta esto según la altura de tu encabezado */
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-page .sidebar h2 {
+    margin-top: 0;
+}
+
+.contact-page .content {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .contact-page main {
+        flex-direction: row;
+    }
+
+    .contact-page .sidebar {
+        width: 250px;
+        margin-left: 20px;
+    }
+
+    .contact-page .content {
+        margin-right: 20px;
+    }
+}
+
+.contact-page .sidebar ul li a {
+    display: block;
+    padding: 5px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-page .sidebar ul li a:hover {
+    color: var(--accent-color);
+}

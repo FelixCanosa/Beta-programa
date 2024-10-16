@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="general.css">
-    <title>Document</title>
+    <script src="../Resources/JS/header_Footer.js"></script>
+    <link rel="stylesheet" href="../Resources/CSS/general_style.css">
+    <link rel="stylesheet" href="../Resources/CSS/header_footer.css">
+    <title>Orbiton</title>
 </head>
 
-<body>
+<body class="contact-page">
     <header>
     </header>
 
     <div class="container">
         <main>
-            <nav class="sidebar">
+            <nav class="sidebar section-block">
+                <h2>Contenido</h2>
                 <ul>
                     <li><a href="#introduccion">Introducción</a></li>
                     <li><a href="#objetivos">Objetivos</a></li>
@@ -30,7 +33,7 @@
             </nav>
 
             <div class="content">
-                <section id="introduccion" class="content-block">
+                <section id="introduccion" class="section-block">
                     <h2>Introducción</h2>
                     <div class="section-content">
                         <p>Un Juego (programa) Educativo, Sostenible y que concientize el cuidado de la naturaleza a través del Interactivo diálogo Generado por IAs (MLL) y el motor grafico Godot Engine para sostener la arquitectura y lógica del juego. El Juego requiere (a un nivel Software) un sistema operativo de escritorio. Por ahora esta pensado para Linux y Windows.</p>
@@ -38,7 +41,7 @@
                     </div>
                 </section>
 
-                <section id="objetivos" class="content-block">
+                <section id="objetivos" class="section-block">
                     <h2>Objetivos del Proyecto</h2>
                     <div class="section-content">
                         <ol>
@@ -50,7 +53,8 @@
                         </ol>
                     </div>
                 </section>
-                <section id="herramientas" class="content-block">
+
+                <section id="herramientas" class="section-block">
                     <h2>Herramientas del Proyecto</h2>
                     <div class="section-content">
                         <p>Este proyecto utiliza las siguientes herramientas:</p>
@@ -63,8 +67,8 @@
                         </ul>
                     </div>
                 </section>
-    
-                <section id="desafios" class="content-block">
+
+                <sectio id="desafios" class="section-block">
                     <h2>Desafíos, Problemas y Limitaciones</h2>
                     <div class="section-content">
                         <p>Este proyecto se enfrenta a los siguientes desafíos:</p>
@@ -87,8 +91,8 @@
                         </ul>
                     </div>
                 </section>
-    
-                <section id="preguntas-usuarios" class="content-block">
+
+                <section id="preguntas-usuarios" class="section-block">
                     <h2>Preguntas a Potenciales Usuarios</h2>
                     <div class="section-content">
                         <p>Se realizarán las siguientes preguntas a potenciales usuarios:</p>
@@ -100,29 +104,25 @@
                         </ol>
                     </div>
                 </section>
-    
-                <section id="buyer-persona" class="content-block">
+
+                <section id="buyer-persona" class="section-block">
                     <h2>Buyer Persona</h2>
                     <div class="section-content">
                         <p>Descripción del buyer persona del proyecto (Ejemplo).</p>
                     </div>
                 </section>
-    
-                <section id="arte-conceptual" class="content-block">
+
+                <section id="arte-conceptual" class="section-block">
                     <h2>Arte Conceptual y Borradores</h2>
                     <div class="section-content">
-                        <!-- Aquí van las imágenes del arte conceptual y borradores. 
-                             Por ejemplo:
-                             <img src="ruta/a/la/imagen.jpg" alt="Descripción de la imagen">
-                        -->
                         <p>Imagen 1: Boceto del personaje principal, un ser hecho de hojas y madera.</p>
                         <p>Imagen 2: Diseño de un entorno de bosque con árboles pixelados.</p>
                         <p>Imagen 3: Interfaz de diálogo con un NPC controlado por IA.</p>
-                        <!-- ... (Más descripciones de imágenes) ... -->
+                        <!-- Aquí puedes agregar más descripciones de imágenes o las imágenes reales cuando estén disponibles -->
                     </div>
                 </section>
-    
-                <section id="proyectos-similares" class="content-block">
+
+                <section id="proyectos-similares" class="section-block">
                     <h2>Proyectos Similares</h2>
                     <div class="section-content">
                         <h3>NEO NPC (Ubisoft)</h3>
@@ -133,11 +133,22 @@
                         <p>Proyecto que utiliza LLM para dar vida a los NPCs.</p>
                     </div>
                 </section>
-    
-                <section id="las-8-preguntas" class="content-block">
+
+                <section id="las-8-preguntas" class="section-block">
                     <h2>Las 8 Preguntas</h2>
                     <div class="section-content">
-                        <p>Respuestas a las 8 preguntas sobre la viabilidad del proyecto.</p>
+                        <p>Respuestas a las 8 preguntas sobre la viabilidad del proyecto:</p>
+                        <ol>
+                            <li>¿Qué problema resuelve el proyecto?.</li>
+                            <li>¿Quién es el usuario objetivo?</li>
+                            <li>¿Cuál es la propuesta de valor única?</li>
+                            <li>¿Cómo se monetizará el proyecto?</li>
+                            <li>¿Cuáles son los costos principales?</li>
+                            <li>¿Cuáles son los canales de distribución?</li>
+                            <li>¿Quiénes son los competidores principales?</li>
+                            <li>¿Cuál es la ventaja competitiva del proyecto?</li>
+                        </ol>
+                        <!-- Aquí puedes agregar las respuestas a estas preguntas cuando estén disponibles -->
                     </div>
                 </section>
             </div>
@@ -146,8 +157,18 @@
 
     <footer>
     </footer>
-
-    <script src="../header_Footer_Global/header_Footer.js"></script>
-</body>
+    
+</body>  <!-- este escri sirve para la selcecion de sub categorias -->
+<script> 
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
 
 </html>
