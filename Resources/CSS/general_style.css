@@ -22,7 +22,7 @@ body {
     font-family: sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--background-color); 
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -35,6 +35,11 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
+
+    background-image: url(../IMG/Gemini_Generated_Image_n8a3q4n8a3q4n8a3.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover; /* Asegúrate de cubrir todo el contenedor */
 }
 
 /* Estilos de main */
@@ -84,6 +89,7 @@ p {
 /* Estilos de imagen */
 .section-image {
     max-width: 100%;
+    width: 30em;
     height: auto;
     border: 2px solid var(--secondary-color);
     border-radius: 5px;
@@ -277,6 +283,7 @@ p {
 .contact-page {
     display: flex;
     flex-direction: column;
+    
 }
 
 .contact-page main {

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --primary-color: #ffffffe8;
+    --primary-color: #f0f0f0e8;
     --secondary-color: #000000;
     --background-color: #ffffff;
     --text-color: #020202;
-    --accent-color: #ff79c6;
+    --accent-color: #2100b6;
 }
 
 /* Estilos del Header */
