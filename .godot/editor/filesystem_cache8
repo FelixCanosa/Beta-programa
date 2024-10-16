@@ -1,12 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723336133
-README.md::TextFile::-1::1723336133::0::1::::<><>::
-::res://contacto/::1723336133
-::res://header_Footer_Global/::1723336133
-::res://imagenes index/::1723336133
-Captura de pantalla de 2024-08-03 22-45-32.png::CompressedTexture2D::5229038078539322518::1723336133::1723336358::1::::<><>::
-Designer.png::CompressedTexture2D::7475125041288695493::1723336133::1723336357::1::::<><>::
-heroe.png::CompressedTexture2D::9662720596419946::1723336133::1723336357::1::::<><>::
-::res://mundos/::1723335548
-::res://Registro/::1723336133
-::res://Scritps/::1722608439
+::res://::1729104398
+README.md::TextFile::-1::1729104009::0::1::::<><>::
+::res://contacto/::1729104398
+::res://General/::1729104398
+::res://JUego_Prototipo/::1729104398
+Beta.apple-touch-icon.png::CompressedTexture2D::8194234242586293973::1729104398::1729104432::1::::<><>::
+Beta.icon.png::CompressedTexture2D::8894786696634692811::1729104398::1729104432::1::::<><>::
+Beta.png::CompressedTexture2D::9002962697881320786::1729104398::1729104432::1::::<><>::
+::res://ModelosAIs/::1729104398
+::res://ModelosAIs/logica_HADA_AI/::1729104398
+::res://ModelosAIs/logica_HADA_AI/LLM+RECUP/::1728409619
+::res://ModelosAIs/logica_HADA_AI/modelo/::1729104398
+::res://Personajes/::1729104398
+::res://Resources/::1729104398
+::res://Resources/CSS/::1729104398
+::res://Resources/IMG/::1729104398
+Gemini_Generated_Image_n8a3q4n8a3q4n8a3.jpeg::CompressedTexture2D::9059470700350047179::1729104398::1729104433::1::::<><>::
+::res://Resources/IMG/imagenes index/::1729104398
+Gemini__Image_g7n78xg7n78xg7n7.jpeg::CompressedTexture2D::8111516574857862283::1729104398::1729104433::1::::<><>::
+remove.photos-removed-background.png::CompressedTexture2D::1906868865307026692::1729104398::1729104437::1::::<><>::
+::res://Resources/JS/::1729104398

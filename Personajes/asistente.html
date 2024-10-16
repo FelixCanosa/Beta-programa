@@ -12,17 +12,33 @@
     <header></header>
     <div class="container">
         <main>
-            <h2>Asistente AI</h2>
-            <div id="chatbox"></div>
-            <div class="input-container">
-                <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
-                <button onclick="sendMessage()" id="sendButton">Enviar</button>
-            </div>
+            <section id="personajes" class="section-block">
+                <h2>Personajes de Orbiton</h2>
+                <div class="personajes-grid">
+                    <!-- Tarjeta de Personaje 1 -->
+                    <div class="tarjeta-personaje">
+                        <img src="../Resources/IMG/hada.png" alt="Nombre del Personaje 1">
+                        <h3>Hada</h3>
+                        <p>Descripción breve del personaje 1. Puedes mencionar su rol en el juego,
+                            características principales, etc.</p>
+                    </div>
+
+                    <!-- Tarjeta de Personaje 2 -->
+                    <div class="tarjeta-personaje">
+                        <img src="ruta-a-tu-imagen-2.jpg" alt="Nombre del Personaje 2">
+                        <h3>Nombre del Personaje 2</h3>
+                        <p>Descripción breve del personaje 2. Puedes mencionar su rol en el juego,
+                            características principales, etc.</p>
+                    </div>
+
+                    <!-- Repite este bloque para cada personaje -->
+
+                </div>
+            </section>
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../header_Footer_Global/header_Footer.js"></script>
-    <script src="gemini_log.js"></script>
     
     <footer></footer>
 </body>
