@@ -71,6 +71,42 @@ gantt
     Lanzamiento de la página web       :milestone, w12, after w11, 0d
     Mantenimiento y actualizaciones    :w13, after w12, 90d
 ```
+## Diagrama de Gantt del Desarrollo actual
+
+```mermaid
+gantt
+    title Desarrollo del Proyecto OrBER y Página Web
+    dateFormat YYYY-MM-DD
+    
+    section Juego Alpha 1.0
+    Configuración de Godot Engine :done, a1, 2024-09-01, 14d
+    Diseño del personaje principal :done, a3, 2024-09-15, 14d
+    Implementación de mecánicas básicas del jugador :done, a6, 2024-09-29, 14d
+    Implementación de NPCs con personalidad :done, a7, 2024-10-13, 5d
+    Implementación de diálogos básicos :active, a8, 2024-10-17, 7d
+    
+    section Futuras Actualizaciones
+    Diseño del bosque milenario :b1, 2024-11-01, 21d
+    Implementación de Godot LLM (IA) :b2, after b1, 30d
+    Sistema de misiones básico :b3, after b2, 14d
+    Optimización y pruebas :b4, after b3, 14d
+    
+    section Página Web (Wiki)
+    Diseño inicial Frontend :done, w1, 2024-09-01, 30d
+    Implementación sección Home :done, w2, 2024-10-01, 7d
+    Implementación sección Personajes :active, w3, 2024-10-08, 14d
+    Implementación sección General :w4, after w3, 14d
+    Implementación sección Registro :w5, after w4, 7d
+    Implementación sección Nosotros :w6, after w5, 7d
+    
+    section Desarrollo Futuro
+    Refinamiento del Frontend :f1, 2025-01-01, 21d
+    Diseño de la arquitectura Backend :f2, after f1, 21d
+    Desarrollo del Backend :f3, after f2, 45d
+    Integración Frontend-Backend :f4, after f3, 30d
+    Pruebas y optimización :f5, after f4, 21d
+    Lanzamiento de la página web completa :milestone, f6, after f5, 0d
+```
 
 ---
 
