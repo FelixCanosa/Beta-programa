@@ -48,8 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         agregarMensajeAlHistorial('Tú', mensajeUsuario);
 
+
+
+        const backendURL = 'felixcanosa1.pythonanywhere.com/chatbot'; //  URL completa de tu backend
+
         try {
-            const response = await fetch('/chatbot', {
+            const response = await fetch(backendURL, { // Usar backendURL aquí
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error:', error);
-            agregarMensajeAlHistorial('Error', error.message); 
+            agregarMensajeAlHistorial('Error', error.message);
         }
     }
 
@@ -78,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nuevoMensaje = document.createElement('p');
         nuevoMensaje.textContent = `${remitente}: ${mensaje}`;
         historial.appendChild(nuevoMensaje);
-        historial.scrollTop = historial.scrollHeight; 
+        historial.scrollTop = historial.scrollHeight;
     }
 });
