@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-        const backendURL = 'felixcanosa1.pythonanywhere.com/chatbot'; //  URL completa de tu backend
+        const backendURL = 'https://felixcanosa1.pythonanywhere.com/chatbot'; //  URL completa de tu backend
 
         try {
             const response = await fetch(backendURL, { // Usar backendURL aquí
