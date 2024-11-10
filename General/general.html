@@ -5,170 +5,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../Resources/JS/header_Footer.js"></script>
-    <link rel="stylesheet" href="../Resources/CSS/general_style.css">
-    <link rel="stylesheet" href="../Resources/CSS/header_footer.css">
     <title>Orbiton</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Resources/CSS/general_style.css">
+    <link rel="stylesheet" href="../Resources/CSS/header_footer.css">
+    <script src="../Resources/JS/header_Footer.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    
+    
+    <style>
+        .sidebar {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-link {
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+    </style>
 </head>
 
-<body class="contact-page">
+<body>
+    
     <header>
+        
     </header>
 
-    <div class="container">
-        <main>
-            <nav class="sidebar section-block">
-                <h2>Contenido</h2>
-                <ul>
-                    <li><a href="#introduccion">Introducción</a></li>
-                    <li><a href="#objetivos">Objetivos</a></li>
-                    <li><a href="#herramientas">Herramientas</a></li>
-                    <li><a href="#desafios">Desafíos</a></li>
-                    <li><a href="#preguntas-usuarios">Preguntas a Usuarios</a></li>
-                    <li><a href="#buyer-persona">Buyer Persona</a></li>
-                    <li><a href="#arte-conceptual">Arte Conceptual</a></li>
-                    <li><a href="#proyectos-similares">Proyectos Similares</a></li>
-                    <li><a href="#las-8-preguntas">Las 8 Preguntas</a></li>
-                </ul>
+    <div class="container mt-5 ">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar py-3">
+                <div class="position-sticky">
+                    <h2 class="h5 mb-3">Contenido</h2>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#introduccion">Introducción</a>
+                        <a class="nav-link" href="#objetivos">Objetivos</a>
+                        <a class="nav-link" href="#herramientas">Herramientas</a>
+                        <a class="nav-link" href="#desafios">Desafíos</a>
+                        <a class="nav-link" href="#preguntas-usuarios">Preguntas a Usuarios</a>
+                        <a class="nav-link" href="#buyer-persona">Buyer Persona</a>
+                        <a class="nav-link" href="#arte-conceptual">Arte Conceptual</a>
+                        <a class="nav-link" href="#proyectos-similares">Proyectos Similares</a>
+                        <a class="nav-link" href="#las-8-preguntas">Las 8 Preguntas</a>
+                    </div>
+                </div>
             </nav>
 
-            <div class="content">
-                <section id="introduccion" class="section-block">
-                    <h2>Introducción</h2>
-                    <div class="section-content">
-                        <p>Un Juego (programa) Educativo, Sostenible y que concientize el cuidado de la naturaleza a través del Interactivo diálogo Generado por IAs (MLL) y el motor grafico Godot Engine para sostener la arquitectura y lógica del juego. El Juego requiere (a un nivel Software) un sistema operativo de escritorio. Por ahora esta pensado para Linux y Windows.</p>
-                        <p>La premisa seria que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.</p>
+            <!-- Contenido Principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <!-- Introducción -->
+                <section id="introduccion" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Introducción</h2>
+                        <div class="card-text">
+                            <p>Un Juego (programa) Educativo, Sostenible y que concientize el cuidado de la naturaleza a través del Interactivo diálogo Generado por IAs (MLL) y el motor grafico Godot Engine para sostener la arquitectura y lógica del juego. El Juego requiere (a un nivel Software) un sistema operativo de escritorio. Por ahora esta pensado para Linux y Windows.</p>
+                            <p>La premisa seria que el protagonista (un ser no-humano, hecho de hojas y madera), nace en un bosque milenario producto de la deforestación de los humanos, siendo su misión principal solucionar el problema de la deforestación.</p>
+                        </div>
                     </div>
                 </section>
 
-                <section id="objetivos" class="section-block">
-                    <h2>Objetivos del Proyecto</h2>
-                    <div class="section-content">
-                        <ol>
-                            <li>Crear una experiencia inmersa que eduque sobre la importancia de los ecosistemas forestales, la biodiversidad y el equilibrio entre desarrollo humano y medio ambiente.</li>
-                            <li>Fomentar comportamientos sostenibles mediante interacciones con personajes no jugadores (NPC) a través del diálogo generado por IA (MLL).</li>
-                            <li>Generar consciencia sobre la tala de árboles (mediante recursos como la filosofia), las comunidades que dependen de los bosques y los impactos ambientales asociados.</li>
-                            <li>Generar y crear una inmersión más profunda mediante diálogos únicos para el jugador, por medio de Modelos grandes de texto (LLM).</li>
-                            <li>Aprender el uso de los grandes modelos actuales y de la creación de juegos (Por medio de la pagina WEB que tendrá el juego).</li>
-                        </ol>
+                <!-- Objetivos -->
+                <section id="objetivos" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Objetivos del Proyecto</h2>
+                        <div class="card-text">
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Crear una experiencia inmersa que eduque sobre la importancia de los ecosistemas forestales, la biodiversidad y el equilibrio entre desarrollo humano y medio ambiente.</li>
+                                <li class="list-group-item">Fomentar comportamientos sostenibles mediante interacciones con personajes no jugadores (NPC) a través del diálogo generado por IA (MLL).</li>
+                                <li class="list-group-item">Generar consciencia sobre la tala de árboles (mediante recursos como la filosofia), las comunidades que dependen de los bosques y los impactos ambientales asociados.</li>
+                                <li class="list-group-item">Generar y crear una inmersión más profunda mediante diálogos únicos para el jugador, por medio de Modelos grandes de texto (LLM).</li>
+                                <li class="list-group-item">Aprender el uso de los grandes modelos actuales y de la creación de juegos (Por medio de la pagina WEB que tendrá el juego).</li>
+                            </ol>
+                        </div>
                     </div>
                 </section>
 
-                <section id="herramientas" class="section-block">
-                    <h2>Herramientas del Proyecto</h2>
-                    <div class="section-content">
-                        <p>Este proyecto utiliza las siguientes herramientas:</p>
-                        <ul>
-                            <li><strong>Godot Engine:</strong> Motor de juego de código abierto.</li>
-                            <li><strong>Godot LLM:</strong> Plugin para integrar modelos de lenguaje grande (LLM).</li>
-                            <li><strong>GodotScript:</strong> Lenguaje de programación interno de Godot.</li>
-                            <li><strong>Pixelorama:</strong> Software de código abierto para crear pixel art.</li>
-                            <li><strong>GitHub:</strong> Plataforma de desarrollo colaborativo.</li>
-                        </ul>
+                <!-- Herramientas -->
+                <section id="herramientas" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Herramientas del Proyecto</h2>
+                        <div class="card-text">
+                            <p>Este proyecto utiliza las siguientes herramientas:</p>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>Godot Engine:</strong> Motor de juego de código abierto.</li>
+                                <li class="list-group-item"><strong>Godot LLM:</strong> Plugin para integrar modelos de lenguaje grande (LLM).</li>
+                                <li class="list-group-item"><strong>GodotScript:</strong> Lenguaje de programación interno de Godot.</li>
+                                <li class="list-group-item"><strong>Pixelorama:</strong> Software de código abierto para crear pixel art.</li>
+                                <li class="list-group-item"><strong>GitHub:</strong> Plataforma de desarrollo colaborativo.</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
-                <sectio id="desafios" class="section-block">
-                    <h2>Desafíos, Problemas y Limitaciones</h2>
-                    <div class="section-content">
-                        <p>Este proyecto se enfrenta a los siguientes desafíos:</p>
-                        <ul>
-                            <li>Recursos de hardware</li>
-                            <li>Manejo de Godot Engine</li>
-                            <li>Falta de profundidad emocional en el diálogo generado por IA</li>
-                            <li>Comprensión contextual de la IA</li>
-                            <li>Localización y barreras lingüísticas</li>
-                            <li>Sesgo y discriminación en los modelos de IA</li>
-                        </ul>
-                        <h3>Señales de Problemas</h3>
-                        <ul>
-                            <li>Falta de organización a nivel de equipo</li>
-                            <li>Problemas de exportar el juego a la web</li>
-                            <li>Crear recursos visuales para el juego</li>
-                            <li>Resolución de juego y paletas de colores</li>
-                            <li>Tiempo de desarrollo</li>
-                            <li>Crear juegos compatibles y optimizados</li>
-                        </ul>
+                <!-- Desafíos -->
+                <section id="desafios" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Desafíos, Problemas y Limitaciones</h2>
+                        <div class="card-text">
+                            <h5 class="mt-3">Desafíos Principales:</h5>
+                            <ul class="list-group mb-4">
+                                <li class="list-group-item">Recursos de hardware</li>
+                                <li class="list-group-item">Manejo de Godot Engine</li>
+                                <li class="list-group-item">Falta de profundidad emocional en el diálogo generado por IA</li>
+                                <li class="list-group-item">Comprensión contextual de la IA</li>
+                                <li class="list-group-item">Localización y barreras lingüísticas</li>
+                                <li class="list-group-item">Sesgo y discriminación en los modelos de IA</li>
+                            </ul>
+
+                            <h5>Señales de Problemas:</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Falta de organización a nivel de equipo</li>
+                                <li class="list-group-item">Problemas de exportar el juego a la web</li>
+                                <li class="list-group-item">Crear recursos visuales para el juego</li>
+                                <li class="list-group-item">Resolución de juego y paletas de colores</li>
+                                <li class="list-group-item">Tiempo de desarrollo</li>
+                                <li class="list-group-item">Crear juegos compatibles y optimizados</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
-                <section id="preguntas-usuarios" class="section-block">
-                    <h2>Preguntas a Potenciales Usuarios</h2>
-                    <div class="section-content">
-                        <p>Se realizarán las siguientes preguntas a potenciales usuarios:</p>
-                        <ol>
-                            <li>¿Qué tan interesado estarías en jugar un juego educativo que aborde temas de sostenibilidad y cuidado del medio ambiente?</li>
-                            <li>¿Qué aspectos de la conservación de bosques y la lucha contra la deforestación te interesan más?</li>
-                            <li>¿Qué experiencia tienes con juegos que utilizan diálogos generados por IA? ¿Qué te atrae o te preocupa de esta tecnología?</li>
-                            <!-- ... (Resto de las preguntas) ... -->
-                        </ol>
+                <!-- Preguntas a Usuarios -->
+                <section id="preguntas-usuarios" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Preguntas a Potenciales Usuarios</h2>
+                        <div class="card-text">
+                            <p class="lead">Se realizarán las siguientes preguntas a potenciales usuarios:</p>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">¿Qué tan interesado estarías en jugar un juego educativo que aborde temas de sostenibilidad y cuidado del medio ambiente?</li>
+                                <li class="list-group-item">¿Qué aspectos de la conservación de bosques y la lucha contra la deforestación te interesan más?</li>
+                                <li class="list-group-item">¿Qué experiencia tienes con juegos que utilizan diálogos generados por IA? ¿Qué te atrae o te preocupa de esta tecnología?</li>
+                            </ol>
+                        </div>
                     </div>
                 </section>
 
-                <section id="buyer-persona" class="section-block">
-                    <h2>Buyer Persona</h2>
-                    <div class="section-content">
-                        <p>Descripción del buyer persona del proyecto (Ejemplo).</p>
+                <!-- Buyer Persona -->
+                <section id="buyer-persona" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Buyer Persona</h2>
+                        <div class="card-text">
+                            <div class="alert alert-info">
+                                <p class="mb-0">Descripción del buyer persona del proyecto (Ejemplo).</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section id="arte-conceptual" class="section-block">
-                    <h2>Arte Conceptual y Borradores</h2>
-                    <div class="section-content">
-                        <p>Imagen 1: Boceto del personaje principal, un ser hecho de hojas y madera.</p>
-                        <p>Imagen 2: Diseño de un entorno de bosque con árboles pixelados.</p>
-                        <p>Imagen 3: Interfaz de diálogo con un NPC controlado por IA.</p>
-                        <!-- Aquí puedes agregar más descripciones de imágenes o las imágenes reales cuando estén disponibles -->
+                <!-- Arte Conceptual -->
+                <section id="arte-conceptual" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Arte Conceptual y Borradores</h2>
+                        <div class="card-text">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Imagen 1</h5>
+                                            <p class="card-text">Boceto del personaje principal, un ser hecho de hojas y madera.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Imagen 2</h5>
+                                            <p class="card-text">Diseño de un entorno de bosque con árboles pixelados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Imagen 3</h5>
+                                            <p class="card-text">Interfaz de diálogo con un NPC controlado por IA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section id="proyectos-similares" class="section-block">
-                    <h2>Proyectos Similares</h2>
-                    <div class="section-content">
-                        <h3>NEO NPC (Ubisoft)</h3>
-                        <p>Proyecto de investigación de Ubisoft para crear NPCs con conversaciones más auténticas.</p>
-                        <h3>AI Town</h3>
-                        <p>Ciudad virtual donde los personajes de IA viven, chatean y socializan.</p>
-                        <h3>Generative Agents: Interactive Simulacra of Human Behavior</h3>
-                        <p>Proyecto que utiliza LLM para dar vida a los NPCs.</p>
+                <!-- Proyectos Similares -->
+                <section id="proyectos-similares" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Proyectos Similares</h2>
+                        <div class="card-text">
+                            <div class="accordion" id="proyectosSimilares">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            NEO NPC (Ubisoft)
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#proyectosSimilares">
+                                        <div class="accordion-body">
+                                            Proyecto de investigación de Ubisoft para crear NPCs con conversaciones más auténticas.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            AI Town
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#proyectosSimilares">
+                                        <div class="accordion-body">
+                                            Ciudad virtual donde los personajes de IA viven, chatean y socializan.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            Generative Agents
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#proyectosSimilares">
+                                        <div class="accordion-body">
+                                            Proyecto que utiliza LLM para dar vida a los NPCs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section id="las-8-preguntas" class="section-block">
-                    <h2>Las 8 Preguntas</h2>
-                    <div class="section-content">
-                        <p>Respuestas a las 8 preguntas sobre la viabilidad del proyecto:</p>
-                        <ol>
-                            <li>¿Qué problema resuelve el proyecto?.</li>
-                            <li>¿Quién es el usuario objetivo?</li>
-                            <li>¿Cuál es la propuesta de valor única?</li>
-                            <li>¿Cómo se monetizará el proyecto?</li>
-                            <li>¿Cuáles son los costos principales?</li>
-                            <li>¿Cuáles son los canales de distribución?</li>
-                            <li>¿Quiénes son los competidores principales?</li>
-                            <li>¿Cuál es la ventaja competitiva del proyecto?</li>
-                        </ol>
-                        <!-- Aquí puedes agregar las respuestas a estas preguntas cuando estén disponibles -->
+                <!-- Las 8 Preguntas -->
+                <section id="las-8-preguntas" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Las 8 Preguntas</h2>
+                        <div class="card-text">
+                            <p class="lead">Respuestas a las 8 preguntas sobre la viabilidad del proyecto:</p>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <h5 class="mb-1">1. ¿Qué problema resuelve el proyecto?</h5>
+                                    <p class="mb-1">Respuesta pendiente</p>
+                                </div>
+                                <div class="list-group-item">
+                                    <h5 class="mb-1">2. ¿Quién es el usuario objetivo?</h5>
+                                    <p class="mb-1">Respuesta pendiente</p>
+                                </div>
+                                <!-- Continuar con las demás preguntas siguiendo el mismo formato -->
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
 
     <footer>
+        
     </footer>
+
+     <!-- Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-</body>  <!-- este escri sirve para la selcecion de sub categorias -->
-<script> 
-    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-    
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+     <!-- Script para scroll suave -->
+    <script>
+        document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
     </script>
 
+    <!-- Script para activar tooltips de Bootstrap -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+
+    <!-- Script para mantener activo el enlace actual en la sidebar -->
+    <script>
+        // Obtener todos los enlaces de la sidebar
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Función para actualizar el enlace activo basado en la posición del scroll
+        function updateActiveLink() {
+            const fromTop = window.scrollY + 100;
+
+            navLinks.forEach(link => {
+                const section = document.querySelector(link.hash);
+
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Escuchar el evento scroll
+        window.addEventListener('scroll', updateActiveLink);
+    </script>
+
+    <!-- Script para colapsar sidebar en móviles -->
+    <script>
+        const toggleSidebar = () => {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('show');
+        }
+
+        // Si estás usando un botón para toggle
+        document.querySelector('.sidebar-toggle')?.addEventListener('click', toggleSidebar);
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -5,65 +5,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbiton</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./Resources/CSS/general_style.css">
     <link rel="stylesheet" href="./Resources/CSS/header_footer.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-size: 18px; /* Aumentado el tamaño base de la fuente */
+            line-height: 1.6; /* Mejorado el espaciado entre líneas */
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-title {
+            font-size: 2rem; /* Título más grande */
+            color: #333; /* Color más oscuro para mejor contraste */
+            margin-bottom: 1rem;
+        }
+        .card-text {
+            font-size: 1.1rem; /* Texto del cuerpo ligeramente más grande */
+            color: #444; /* Mejor contraste */
+        }
+        .btn-primary {
+            background-color: #4e9af1;
+            border-color: #4e9af1;
+            font-size: 1.1rem; /* Botón más grande */
+            padding: 0.5rem 1rem;
+        }
+        .btn-primary:hover {
+            background-color: #3d8ae0;
+            border-color: #3d8ae0;
+        }
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            background-color: transparent;
+            font-size: 1.1rem; /* Elementos de lista más grandes */
+        }
+        .list-group-item a {
+            color: #333; /* Mejor contraste */
+            transition: color 0.3s ease;
+        }
+        .list-group-item a:hover {
+            color: #4e9af1;
+        }
+        .img-fluid {
+            border-radius: 10px;
+        }
+    </style>
     <script src="./Resources/JS/header_Footer.js"></script>
 </head>
 
-<body>
-    <header></header>
+<body class="d-flex flex-column min-vh-100">
 
-    <div class="container">
+    <header>
+    </header>
+
+    <div class="container py-5">
         <main>
-            <section id="introduccion" class="section-block">
-                <h2>Bienvenido a la Wiki de OrBER</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <a name="" id="" class="btn btn-primary " href="./JUego_Prototipo/Beta.html"
-                            role="button">Jugar OrBER</a>
-    
-                        <p>Sumérgete en OrBER, un juego que redefine la experiencia narrativa. Explora un
-                            mundo donde cada
-                            interacción con personajes impulsados por IA te lleva por caminos inesperados de
-                            introspección y te
-                            invita a reflexionar sobre la importancia de la conservación ambiental.</p>
+            <!-- Sección de Introducción -->
+            <section id="introduccion" class="card mb-5">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Bienvenido a la Wiki de OrBER</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <a href="./JUego_Prototipo/Beta.html" class="btn btn-primary mb-3">
+                                <i class="fas fa-play-circle me-2"></i>Jugar OrBER
+                            </a>
+                            <p class="card-text">Sumérgete en OrBER, un juego que redefine la experiencia narrativa. Explora un mundo donde cada interacción con personajes impulsados por IA te lleva por caminos inesperados de introspección y te invita a reflexionar sobre la importancia de la conservación ambiental.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./Resources/IMG/imagenes index/remove.photos-removed-background.png" 
+                                 alt="Imagen de introducción" 
+                                 class="img-fluid rounded shadow">
+                        </div>
                     </div>
-                    <img src="./Resources/IMG/imagenes index/remove.photos-removed-background.png"
-                        alt="Imagen de introducción" class="section-image">
                 </div>
             </section>
     
-            <section id="destacado" class="section-block">
-                <h2>Contenido Destacado</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <ul>
-                            <li><a href="personajes.html#">Conoce a los habitantes de OrBER</a></li>
-                            <li><a href="mapas.html#">Explora el Bosque Milenario</a></li>
-                            <li><a href="IA.html">Profundiza en la tecnología detrás de OrBER</a></li>
-                        </ul>
+            <!-- Sección de Contenido Destacado -->
+            <section id="destacado" class="card mb-5">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Contenido Destacado</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-users me-2"></i><a href="personajes.html#" class="text-decoration-none">Conoce a los habitantes de OrBER</a></li>
+                                <li class="list-group-item"><i class="fas fa-map-marked-alt me-2"></i><a href="mapas.html#" class="text-decoration-none">Explora el Bosque Milenario</a></li>
+                                <li class="list-group-item"><i class="fas fa-microchip me-2"></i><a href="IA.html" class="text-decoration-none">Profundiza en la tecnología detrás de OrBER</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./Resources/IMG/imagenes index/Gemini__Image_g7n78xg7n78xg7n7.jpeg" 
+                                 alt="Imagen de contenido destacado" 
+                                 class="img-fluid rounded shadow">
+                        </div>
                     </div>
-                    <img src="./Resources/IMG/imagenes index/Gemini__Image_g7n78xg7n78xg7n7.jpeg" alt="Imagen de contenido destacado"
-                        class="section-image">
                 </div>
             </section>
     
-            <section id="imagenes-proyecto" class="section-block">
-                <h2>Imágenes de OrBER</h2>
-                <div class="galeria">
-                    <img src="imagenes index/Captura de pantalla de 2024-08-03 22-45-32.png"
-                        alt="Diálogo con un personaje">
-                    <img src="ruta-a-tu-imagen-2.jpg" alt="Exploración del bosque">
-                    <img src="ruta-a-tu-imagen-3.jpg" alt="Interfaz del juego">
-    
+            <!-- Sección de Imágenes -->
+            <section id="imagenes-proyecto" class="card">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Imágenes de OrBER</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <img src="imagenes index/Captura de pantalla de 2024-08-03 22-45-32.png" 
+                                 alt="Diálogo con un personaje" 
+                                 class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="ruta-a-tu-imagen-2.jpg" 
+                                 alt="Exploración del bosque" 
+                                 class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="ruta-a-tu-imagen-3.jpg" 
+                                 alt="Interfaz del juego" 
+                                 class="img-fluid rounded shadow">
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
-
-    <footer></footer>
-
     
+    <footer class="mt-auto"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Resources/JS/header_Footer.js"></script>
+    <title>Asistente AI</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tus estilos personalizados -->
     <link rel="stylesheet" href="../Resources/CSS/general_style.css">
     <link rel="stylesheet" href="../Resources/CSS/header_footer.css">
-    <title>Asistente AI</title>
+
+    <script src="../Resources/JS/header_Footer.js"></script>
 </head>
-<body>
+
+<body class="d-flex flex-column min-vh-100">
     <header></header>
-    <div class="container">
+
+    <div class="container mt-5 flex-grow-1">
         <main>
             <section id="personajes" class="section-block">
-                <h2>Personajes de Orbiton</h2>
-                <div class="personajes-grid">
+                <h2 class="mb-4">Personajes de Orbiton</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     <!-- Tarjeta de Personaje 1 -->
-                    <div class="tarjeta-personaje">
-                        <img src="../Resources/IMG/hada.png" alt="Nombre del Personaje 1">
-                        <h3>Hada</h3>
-                        <p>Descripción breve del personaje 1. Puedes mencionar su rol en el juego,
-                            características principales, etc.</p>
+                    <!-- Tarjeta de Personaje 1 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../Resources/IMG/hada.png" class="card-img-top" alt="Luminara">
+                            <div class="card-body">
+                                <h3 class="card-title">Luminara</h3>
+                                <p class="card-text">Luminara es un hada guardiana del Bosque Milenario. Con su
+                                    resplandor etéreo y alas iridiscentes, guía a los jugadores a través de los secretos
+                                    ancestrales del bosque. Su sabiduría milenaria es crucial para restaurar el
+                                    equilibrio ecológico y desentrañar los misterios de OrBER.</p>
+                                    <button class="btn btn-primary mt-2">Charlar</button>
+                                </div>
+                        </div>
                     </div>
 
                     <!-- Tarjeta de Personaje 2 -->
-                    <div class="tarjeta-personaje">
-                        <img src="ruta-a-tu-imagen-2.jpg" alt="Nombre del Personaje 2">
-                        <h3>Nombre del Personaje 2</h3>
-                        <p>Descripción breve del personaje 2. Puedes mencionar su rol en el juego,
-                            características principales, etc.</p>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../Resources/IMG/Gemini_Generated_Image_7aktze7aktze7akt.jpeg"
+                                class="card-img-top" alt="Sylvan">
+                            <div class="card-body">
+                                <h3 class="card-title">Sylvan</h3>
+                                <p class="card-text">Sylvan es un antiguo espíritu arbóreo, guardián de los secretos más
+                                    profundos del bosque. Con su cuerpo hecho de corteza y musgo, y ojos que brillan con
+                                    la sabiduría de los siglos, Sylvan desafía a los jugadores con acertijos ecológicos
+                                    y les enseña sobre la importancia de la simbiosis en la naturaleza.</p>
+                                    <button class="btn btn-primary mt-2">Charlar</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de Personaje 3 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../Resources/IMG/Gemini_Generated_Image_ngsrt0ngsrt0ngsr.jpeg" class="card-img-top" alt="Timber">
+                            <div class="card-body">
+                                <h3 class="card-title">Timber</h3>
+                                <p class="card-text">Timber es un enigmático lobo negro tallado en madera antigua,
+                                    coronado por un distintivo sombrero de duende rojo. Este guardián del bosque combina
+                                    la astucia del lobo con la magia traviesa de los duendes. Timber desafía a los
+                                    jugadores con acertijos sobre el ciclo de vida del bosque y enseña la importancia
+                                    del equilibrio entre la preservación y la renovación natural.</p>
+                                    <button class="btn btn-primary mt-2">Charlar</button>
+                                </div>
+                        </div>
                     </div>
 
                     <!-- Repite este bloque para cada personaje -->
@@ -37,9 +78,15 @@
             </section>
         </main>
     </div>
+
+    <footer class=""></footer>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../header_Footer_Global/header_Footer.js"></script>
-    
-    <footer></footer>
 </body>
+
 </html>
