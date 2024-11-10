@@ -76,6 +76,37 @@
 
                 </div>
             </section>
+
+            <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="chatModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img id="chatPersonajeImagen" src="" alt="Imagen del personaje" class="img-fluid rounded mb-3">
+                                    <p id="chatPersonajeDescripcion" class="small text-muted"></p>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="chatMessages" class="border rounded p-3" style="height: 300px; overflow-y: auto;">
+                                        <!-- Los mensajes del chat se insertarán aquí -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="userMessage" placeholder="Escribe tu mensaje...">
+                                <button type="button" class="btn btn-primary" id="sendMessageBtn">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 

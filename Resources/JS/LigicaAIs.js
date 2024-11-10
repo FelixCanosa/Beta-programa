@@ -1,87 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonesCharlar = document.querySelectorAll('.btn-primary');
-    const contenedorDialogo = crearContenedorDialogo();
+    const chatModal = new bootstrap.Modal(document.getElementById('chatModal'));
+    const chatModalLabel = document.getElementById('chatModalLabel');
+    const chatPersonajeImagen = document.getElementById('chatPersonajeImagen');
+    const chatPersonajeDescripcion = document.getElementById('chatPersonajeDescripcion');
+    const chatMessages = document.getElementById('chatMessages');
+    const userMessage = document.getElementById('userMessage');
+    const sendMessageBtn = document.getElementById('sendMessageBtn');
     let personajeActual = null;
 
     botonesCharlar.forEach(boton => {
         boton.addEventListener('click', () => {
             const card = boton.closest('.card');
             personajeActual = card.querySelector('.card-title').textContent;
-            mostrarDialogo(personajeActual);
+            const imagenSrc = card.querySelector('.card-img-top').src;
+            const descripcion = card.querySelector('.card-text').textContent;
+            mostrarChat(personajeActual, imagenSrc, descripcion);
         });
     });
 
-    function crearContenedorDialogo() {
-        const contenedor = document.createElement('div');
-        contenedor.id = 'contenedorDialogo';
-        contenedor.style.display = 'none';
-        contenedor.innerHTML = `
-            <div class="dialogo-header">
-                <span id="nombrePersonaje"></span>
-                <button id="cerrarDialogo">X</button>
-            </div>
-            <div id="historialMensajes"></div>
-            <input type="text" id="mensajeUsuario">
-            <button id="enviarMensaje">Enviar</button>
-        `;
-        document.body.appendChild(contenedor);
-
-        document.getElementById('cerrarDialogo').addEventListener('click', () => {
-            contenedor.style.display = 'none';
-            personajeActual = null;
-        });
-        document.getElementById('enviarMensaje').addEventListener('click', enviarMensaje);
-
-        return contenedor;
+    function mostrarChat(nombrePersonaje, imagenSrc, descripcion) {
+        chatModalLabel.textContent = nombrePersonaje;
+        chatPersonajeImagen.src = imagenSrc;
+        chatPersonajeDescripcion.textContent = truncateText(descripcion, 100);
+        chatMessages.innerHTML = '';
+        chatModal.show();
+        userMessage.focus();
     }
 
-    function mostrarDialogo(nombrePersonaje) {
-        document.getElementById('nombrePersonaje').textContent = nombrePersonaje;
-        contenedorDialogo.style.display = 'block';
-        document.getElementById('historialMensajes').innerHTML = '';
-        document.getElementById('mensajeUsuario').focus();
+    function truncateText(text, maxLength) {
+        if (text.length <= maxLength) return text;
+        return text.substr(0, maxLength) + '...';
     }
+
+    sendMessageBtn.addEventListener('click', enviarMensaje);
+    userMessage.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') enviarMensaje();
+    });
 
     async function enviarMensaje() {
-        const mensajeUsuario = document.getElementById('mensajeUsuario').value;
-        document.getElementById('mensajeUsuario').value = '';
+        const mensaje = userMessage.value.trim();
+        if (!mensaje) return;
 
-        agregarMensajeAlHistorial('Tú', mensajeUsuario);
+        agregarMensajeAlChat('Tú', mensaje);
+        userMessage.value = '';
 
-
-
-        const backendURL = 'https://felixcanosa1.pythonanywhere.com/chatbot'; //  URL completa de tu backend
+        const backendURL = 'https://felixcanosa1.pythonanywhere.com/chatbot';
 
         try {
-            const response = await fetch(backendURL, { // Usar backendURL aquí
+            const response = await fetch(backendURL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ personaje: personajeActual, message: mensajeUsuario })
+                body: JSON.stringify({ personaje: personajeActual, message: mensaje })
             });
 
             if (!response.ok) {
                 const errorData = await response.json();
-                const errorMessage = errorData.error || `Error HTTP: ${response.status}`;
-                throw new Error(errorMessage);
+                throw new Error(errorData.error || `Error HTTP: ${response.status}`);
             }
 
             const data = await response.json();
-            const respuestaIA = data.response;
-            agregarMensajeAlHistorial(personajeActual, respuestaIA);
+            agregarMensajeAlChat(personajeActual, data.response);
 
         } catch (error) {
             console.error('Error:', error);
-            agregarMensajeAlHistorial('Error', error.message);
+            agregarMensajeAlChat('Error', error.message);
         }
     }
 
-    function agregarMensajeAlHistorial(remitente, mensaje) {
-        const historial = document.getElementById('historialMensajes');
-        const nuevoMensaje = document.createElement('p');
-        nuevoMensaje.textContent = `${remitente}: ${mensaje}`;
-        historial.appendChild(nuevoMensaje);
-        historial.scrollTop = historial.scrollHeight;
+    function agregarMensajeAlChat(remitente, mensaje) {
+        const messageElement = document.createElement('div');
+        messageElement.className = `mb-3 ${remitente === 'Tú' ? 'text-end' : ''}`;
+        messageElement.innerHTML = `
+            <strong>${remitente}:</strong>
+            <p class="mb-0">${mensaje}</p>
+        `;
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 });
