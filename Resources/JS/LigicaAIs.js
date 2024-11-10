@@ -1,5 +1,3 @@
-// header_Footer.js (o el archivo JS donde quieras colocar el código)
-
 document.addEventListener('DOMContentLoaded', () => {
     const botonesCharlar = document.querySelectorAll('.btn-primary');
     const contenedorDialogo = crearContenedorDialogo();
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function crearContenedorDialogo() {
         const contenedor = document.createElement('div');
         contenedor.id = 'contenedorDialogo';
-        contenedor.style.display = 'none'; // Inicialmente oculto
+        contenedor.style.display = 'none';
         contenedor.innerHTML = `
             <div class="dialogo-header">
                 <span id="nombrePersonaje"></span>
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('cerrarDialogo').addEventListener('click', () => {
             contenedor.style.display = 'none';
-            personajeActual = null; // Limpiar personaje al cerrar
+            personajeActual = null;
         });
         document.getElementById('enviarMensaje').addEventListener('click', enviarMensaje);
 
@@ -40,50 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
     function mostrarDialogo(nombrePersonaje) {
         document.getElementById('nombrePersonaje').textContent = nombrePersonaje;
         contenedorDialogo.style.display = 'block';
-        document.getElementById('historialMensajes').innerHTML = ''; // Limpiar historial al abrir
-        document.getElementById('mensajeUsuario').focus(); // Enfocar el input
+        document.getElementById('historialMensajes').innerHTML = '';
+        document.getElementById('mensajeUsuario').focus();
     }
 
     async function enviarMensaje() {
         const mensajeUsuario = document.getElementById('mensajeUsuario').value;
-        document.getElementById('mensajeUsuario').value = ''; // Limpiar input
+        document.getElementById('mensajeUsuario').value = '';
 
         agregarMensajeAlHistorial('Tú', mensajeUsuario);
 
-        const respuestaIA = await obtenerRespuestaIA(personajeActual, mensajeUsuario);
-        agregarMensajeAlHistorial(personajeActual, respuestaIA);
-    }
-
-
-
-    async function obtenerRespuestaIA(personaje, mensaje) {
         try {
-          const response = await fetch('/api/chat', {  // Reemplaza '/api/chat' con la ruta correcta de tu API
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ personaje: personaje, mensaje: mensaje })
-          });
+            const response = await fetch('/chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ personaje: personajeActual, message: mensajeUsuario })
+            });
 
-          if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
-          }
+            if (!response.ok) {
+                const errorData = await response.json();
+                const errorMessage = errorData.error || `Error HTTP: ${response.status}`;
+                throw new Error(errorMessage);
+            }
 
-          const data = await response.json();
-          return data.respuesta;
+            const data = await response.json();
+            const respuestaIA = data.response;
+            agregarMensajeAlHistorial(personajeActual, respuestaIA);
 
         } catch (error) {
-          console.error('Error al obtener respuesta de la IA:', error);
-          return 'Lo siento, ha ocurrido un error. Inténtalo de nuevo.';
+            console.error('Error:', error);
+            agregarMensajeAlHistorial('Error', error.message); 
         }
-      }
+    }
 
     function agregarMensajeAlHistorial(remitente, mensaje) {
         const historial = document.getElementById('historialMensajes');
         const nuevoMensaje = document.createElement('p');
         nuevoMensaje.textContent = `${remitente}: ${mensaje}`;
         historial.appendChild(nuevoMensaje);
-        historial.scrollTop = historial.scrollHeight; // Scroll automático al final
+        historial.scrollTop = historial.scrollHeight; 
     }
 });
