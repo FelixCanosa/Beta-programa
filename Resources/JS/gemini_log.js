@@ -1,4 +1,4 @@
-const BACKEND_URL = 'https://felixcanosa1.pythonanywhere.com/chatbot';
+const BACKEND_URL = 'https://FelixCanosaA.pythonanywhere.com/chatbot';
 
 async function sendMessage() {
     const userInput = document.getElementById('userInput').value;
